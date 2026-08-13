@@ -1,0 +1,105 @@
+# Milk-V Duo S (SG2000) 手势识别完整项目实录
+
+> 一个从「官方死路」到「关键点手势识别稳定运行」的完整嵌入式 AI 项目复盘。
+> 包含：**旧固件探索 → SD 卡固件移植 → 摄像头实时推流 → 7类手势分类 → 官方关键点手势识别 → 网络/SSH 打通** 全过程的代码、踩坑、解决与交付物。
+
+## 项目目标
+
+在 **Milk-V Duo S（SG2000, RISC-V CV181x, 512MB）** 上部署自定义手势识别：摄像头实时采集 → 手部检测 → 手势分类 → MJPEG/RTSP 推流，全程可在评估板实时运行。
+
+**最终达成的能力**（关键点方案）：
+- 实时检测手部 + 提取 21 个手部关键点 + 分类手势
+- **number1/2/3/4/5 稳定识别**（对应官方 one/two/three/four/five）
+- 全程推流可视化（手部框 + 关键点 + 手势标签）
+
+## 里程碑时间线（核心故事线）
+
+| # | 阶段 | 状态 |
+|---|------|------|
+| #1-9 | 官方分类 API 全死路（HandClassification=0109, Image_Classification=010B） | ❌ 死路 |
+| #19-24 | dbr2 头文件 + 固件库打破 ABI 僵局，手检+RTSP 推流通 | ✅ |
+| #42-44 | 手工移植新固件到 SD 卡（绕开 eMMC 烧录），WiFi 连通 | ✅ |
+| #52-60 | GC2083 取帧 + MJPEG 软编码推流（绕开 VENC 内核 bug） | ✅ |
+| #61-65 | model_factory 解 OpenModel 阻塞，手势识别完整闭环 | ✅ |
+| #66-69 | 7类模型崩溃/恒输问题源码级定位 | 🔍 |
+| #70 | USB 网络 + SSH 打通（`echo device > /proc/cviusb/otg_role`） | ✅ |
+| #71-72 | TDL `convertPixelFormat` FP32 崩溃修复 + 裸 cviruntime 分类 | ✅ |
+| #73+ | **官方关键点手势识别**（det_hand → keypoint_hand → 9类分类），1-5 稳定 | ✅ |
+
+## 目录结构
+
+```
+├── README.md                  # 本文件（项目总览）
+├── docs/                      # 核心经验文档（详细版）
+│   ├── 01-旧固件死路与ABI.md
+│   ├── 02-固件移植SD卡启动.md
+│   ├── 03-摄像头取帧与推流.md
+│   ├── 04-手势分类7类修复.md
+│   ├── 05-关键点手势识别.md
+│   ├── 06-网络与SSH打通.md
+│   └── 07-坑位速查表.md
+├── code/                      # 全部自研源码
+│   ├── streaming/            # 推流程序（手检/分类/关键点）
+│   ├── keypoint/             # 关键点手势识别
+│   ├── utils/                # 模型探针/验证工具
+│   ├── training/             # 训练/ONNX转换/校准脚本
+│   └── build/                # 全部编译脚本
+├── deploy/                    # 可部署产物
+│   ├── models/               # cvimodel 模型
+│   └── configs/              # model_factory.json 等
+├── timeline/                  # 验证日志（#0-#72 完整）
+└── assets/                    # 截图/示意图
+```
+
+## 快速开始
+
+### 硬件
+- Milk-V Duo S（SG2000, CV181x RISC-V）
+- GC2083 MIPI 摄像头
+- USB-C 数据线（连开发机，供电+网络）、网线（可选）
+
+### 环境
+- 开发机：Linux，`riscv64-unknown-linux-musl` 交叉工具链（见 `docs/`）
+- 评估板：musl 固件，root/milkv
+
+### 编译一个推流程序
+```bash
+# 见 code/build/build_tdl_gesture_kpt_stream.sh（关键点手势识别版）
+# 见 code/build/build_tdl_gesture_stream.sh（7类图像分类版）
+bash code/build/build_tdl_gesture_kpt_stream.sh
+```
+
+### 部署
+```bash
+# 网络：USB 直连 / 网线直连见 docs/06
+sshpass -p milkv scp build_out/gc2083/tdl_gesture_kpt_stream root@<board>:/mnt/data/
+sshpass -p milkv ssh root@<board> 'LD_LIBRARY_PATH=/mnt/system/lib:/mnt/system/usr/lib:/mnt/system/usr/lib/3rd /mnt/data/tdl_gesture_kpt_stream 8881'
+# 浏览器打开 http://<board>:8881/
+```
+
+## 核心经验（一句话）
+
+1. **API 死路判定要源码级确认**：`CVI_TDL_HandClassification` 恒 `0109`，固件样例不过是没查返回值。
+2. **ABI 错位是一切 VI 初始化失败的根源**：头文件版本必须匹配固件（`SAMPLE_VI_CONFIG_S=808` 等）→ dbr2_inc 解决。
+3. **固件分类 API 对自定义 FP32 模型不可用**：7类模型输入必 FP32 → TDL `convertPixelFormat` 只认 INT8/UINT8 → 崩溃。修复见 `docs/04`。
+4. **裸 cviruntime 绕过 TDL 预处理 bug**：手检用 TDL，分类/关键点用裸 cviruntime（已验证可靠）。
+5. **官方关键点方案是手势识别正解**：21 关键点坐标不受 ROI 裁剪形态干扰 → 1-5 稳定。
+6. **USB 网络"缺的不是模块是角色切换"**：`echo device > /proc/cviusb/otg_role`。
+
+## 交付物清单
+
+- ✅ 完整验证日志（#0-#72，`timeline/`）
+- ✅ 运行中的推流程序源码（`code/streaming/`）
+- ✅ 关键点手势识别（`code/keypoint/`）
+- ✅ 训练 + ONNX→cvimodel 转换脚本（`code/training/`）
+- ✅ 修复过的 TDL lib（`deploy/`，含 convertPixelFormat patch）
+- ✅ 网络/SSH 一键脚本
+- ✅ 全部踩坑与绕过方案（`docs/`）
+
+## 许可证
+
+MIT（`LICENSE`）
+
+## 致谢
+
+Sophgo（TPU-MLIR, tdl_sdk, tdl_models）、Milk-V、相关开源社区。

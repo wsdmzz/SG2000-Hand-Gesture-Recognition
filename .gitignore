@@ -1,0 +1,29 @@
+# 编译产物
+*.o
+*.so
+build_out/
+
+# SDK / 大型源码目录（不进仓库，需自行下载）
+b_plan/
+ai/tpu-mlir*/
+ai/host-tools/
+ai/cvitek-tdl-sdk-cv180x/
+ai/duo-tdl-examples/
+
+# 固件镜像 / 大型产物
+*.img
+backup_sdc_old.img
+
+# 采集数据 / 中间数据
+gesture_captured/
+*.npy
+*.npz
+
+# 系统 / 工具
+*.pyc
+__pycache__/
+.DS_Store
+*.swp
+
+# 评估板部署临时
+/tmp/

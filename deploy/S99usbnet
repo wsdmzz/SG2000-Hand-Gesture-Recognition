@@ -1,0 +1,81 @@
+#!/bin/sh
+#
+# S99usbnet - 评估板 USB 网络 + SSH 开机自启 (Milk-V Duo S / SG2000)
+#
+# 作用：开机自动把 USB 控制器切到 device(peripheral) 角色并启用 ECM 网络，
+#       让开发机通过 USB 数据线获得稳定网络(192.168.42.2 <-> 192.168.42.1)，
+#       并启动 dropbear SSH 服务，彻底摆脱不稳定的串口。
+#
+# 依赖（均已在新固件内核内建=y）：
+#   CONFIG_USB_DWC2, CONFIG_USB_CONFIGFS, CONFIG_USB_F_ECM, CONFIG_CONFIGFS_FS
+#   dvice 角色切换：/proc/cviusb/otg_role (cvitek 定制 dwc2 驱动)
+#
+case "$1" in
+  start|"")
+    echo "S99usbnet: start"
+
+    # 1) 挂载 configfs（内核默认若未挂载）
+    if ! mount | grep -q configfs; then
+      mount -t configfs none /sys/kernel/config 2>/dev/null
+    fi
+
+    # 2) 切 USB 控制器角色为 device(peripheral)，让开发机能枚举到 usb0
+    if [ -w /proc/cviusb/otg_role ] && [ "$(cat /proc/cviusb/otg_role 2>/dev/null)" = "host" ]; then
+      echo device > /proc/cviusb/otg_role 2>/dev/null
+      echo "  otg_role -> device"
+    fi
+
+    # 3) 通过 configfs 创建/修复 ECM gadget
+    CFGP=/sys/kernel/config/usb_gadget
+    GAD="$CFGP/usbnet"
+    if [ ! -d "$GAD" ]; then
+      mkdir -p "$CFGP"
+      mkdir -p "$GAD"
+      echo 0x1d6b > "$GAD/idVendor"  2>/dev/null
+      echo 0x0104 > "$GAD/idProduct" 2>/dev/null
+      echo 0x0100 > "$GAD/bcdDevice" 2>/dev/null
+      echo 0x0200 > "$GAD/bcdUSB"    2>/dev/null
+      mkdir -p "$GAD/strings/0x409"
+      echo "MilkV"    > "$GAD/strings/0x409/manufacturer" 2>/dev/null
+      echo "USB ECM"  > "$GAD/strings/0x409/product"      2>/dev/null
+      echo "sg2000"   > "$GAD/strings/0x409/serialnumber" 2>/dev/null
+      mkdir -p "$GAD/configs/c.1/strings/0x409"
+      echo 100 > "$GAD/configs/c.1/MaxPower" 2>/dev/null
+      mkdir -p "$GAD/functions/ecm.usb0"
+      if [ ! -e "$GAD/configs/c.1/ecm.usb0" ]; then
+        ln -s "$GAD/functions/ecm.usb0" "$GAD/configs/c.1/" 2>/dev/null
+      fi
+      # 绑定 UDC（UDC 名固定 4340000.usb）
+      if [ -z "$(cat "$GAD/UDC" 2>/dev/null)" ]; then
+        echo 4340000.usb > "$GAD/UDC" 2>/dev/null
+      fi
+      echo "  ECM gadget configured"
+    fi
+
+    # 4) 配置 usb0 静态 IP 并启用
+    sleep 1
+    ip link set usb0 up 2>/dev/null
+    if ! ip addr show usb0 2>/dev/null | grep -q "192.168.42.1"; then
+      ip addr add 192.168.42.1/24 dev usb0 2>/dev/null
+    fi
+
+    # 5) 启动 dropbear SSH（若未运行）
+    if ! pidof dropbear >/dev/null 2>&1; then
+      mkdir -p /etc/dropbear /var/run && umask 077
+      /usr/sbin/dropbear -R -p 22 >> /tmp/dropbear.log 2>&1 &
+      sleep 1
+    fi
+    echo "S99usbnet: done"
+    ;;
+  stop)
+    echo device/unpin not implemented
+    ;;
+  restart)
+    "$0" start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac
+exit 0

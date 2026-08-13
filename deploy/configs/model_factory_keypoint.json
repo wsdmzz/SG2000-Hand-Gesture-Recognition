@@ -1,0 +1,41 @@
+{
+  "model_list": {
+    "YOLOV8N_DET_HAND": {
+      "types": [
+        "hand"
+      ],
+      "file_name": "yolov8n_det_hand_384_640_INT8"
+    },
+    "KEYPOINT_HAND": {
+      "_comment": "output 21 hand keypoints",
+      "file_name": "keypoint_hand_128_128_INT8",
+      "rgb_order": "rgb"
+    },
+    "CLS_KEYPOINT_HAND_GESTURE": {
+      "_comment": "output hand gesture(0:fist,1:five,2:four,3:none,4:ok,5:one,6:three,7:three2,8:two)",
+      "types": [
+        "fist",
+        "five",
+        "four",
+        "none",
+        "ok",
+        "one",
+        "three",
+        "three2",
+        "two"
+      ],
+      "file_name": "cls_keypoint_hand_gesture_1_42_INT8",
+      "rgb_order": "rgb",
+      "mean": [
+        0,
+        0,
+        0
+      ],
+      "std": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}
