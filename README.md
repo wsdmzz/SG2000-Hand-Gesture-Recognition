@@ -85,14 +85,16 @@ sshpass -p milkv ssh root@<board> 'LD_LIBRARY_PATH=/mnt/system/lib:/mnt/system/u
 4. **裸 cviruntime 绕过 TDL 预处理 bug**：手检用 TDL，分类/关键点用裸 cviruntime（已验证可靠）。
 5. **官方关键点方案是手势识别正解**：21 关键点坐标不受 ROI 裁剪形态干扰 → 1-5 稳定。
 6. **USB 网络"缺的不是模块是角色切换"**：`echo device > /proc/cviusb/otg_role`。
+7. **【关键点正常基线】勿加 PWM 内核驱动**：加入 `CONFIG_PWM_CVITEK` 后，关键点模型推理会坍缩成中心"一团"（分类恒 none）。根因：PWM 与 TPU **共享 `clk_fpll` 父时钟**（cv181x_dtsi，devmem 实测 src_sel 均指向 fpll），dts 改 osc 隔离未奏效。恢复正常必须用**无 PWM 内核 boot.sd**（`deploy/boot.sd.normal`，md5 `1d54008c`）+ **repo 基线版程序**（`code/streaming/tdl_gesture_kpt_stream.c`，产物 md5 `75d256e0`）。舵机若需 PWM 请用 **GPIO 软 PWM 或外置 PCA9685**，勿重编内核。详见验证 #84-#89。
 
 ## 交付物清单
 
-- ✅ 完整验证日志（#0-#72，`timeline/`）
+- ✅ 完整验证日志（#0-#89，`timeline/`）
 - ✅ 运行中的推流程序源码（`code/streaming/`）
 - ✅ 关键点手势识别（`code/keypoint/`）
 - ✅ 训练 + ONNX→cvimodel 转换脚本（`code/training/`）
 - ✅ 修复过的 TDL lib（`deploy/`，含 convertPixelFormat patch）
+- ✅ **关键点正常基线 boot.sd**（`deploy/boot.sd.normal`，md5 `1d54008c`，无 PWM 内核）
 - ✅ 网络/SSH 一键脚本
 - ✅ 全部踩坑与绕过方案（`docs/`）
 
