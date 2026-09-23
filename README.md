@@ -24,7 +24,18 @@
 | #66-69 | 7类模型崩溃/恒输问题源码级定位 | 🔍 |
 | #70 | USB 网络 + SSH 打通（`echo device > /proc/cviusb/otg_role`） | ✅ |
 | #71-72 | TDL `convertPixelFormat` FP32 崩溃修复 + 裸 cviruntime 分类 | ✅ |
-| #73+ | **官方关键点手势识别**（det_hand → keypoint_hand → 9类分类），1-5 稳定 | ✅ |
+| #73-89 | **官方关键点手势识别**（det_hand → keypoint_hand → 9类分类），1-5 稳定 | ✅ |
+| #92-115 | 换自训 **YOLOv8-pose** 模型；发现官方模型对「半握+遮挡」系统性失效（G1~G4 命中 0%） | ✅ |
+| **#116-127** | **自训 pose 模型全链路打通**：量化 bug、ROI 裁剪、旋转对齐、640→480 转换、自适应 ROI | ✅ |
+| **#128** | **定位挂墙多人场景失配**（远距离/任意位置失效）→ 需面向实际场景重训 | ⚠️ |
+
+---
+
+> **重要提醒（#128）**：技术链路（量化/裁剪/旋转/转换/部署/舵机管道）已全部打通，
+> **近距离可用**（`bsc` 0.78~0.83，`G` 行输出，舵机跟随）；
+> **远距离/手偏离 ROI 中心不可用**——根因是训练场景（单人/近距/居中）与
+> 实际使用场景（**挂墙/多人/远距/任意位置/多光照**）失配，**需重训**。
+> 详见 `docs/08-自训pose模型与挂墙场景.md`。
 
 ## 目录结构
 
@@ -37,7 +48,8 @@
 │   ├── 04-手势分类7类修复.md
 │   ├── 05-关键点手势识别.md
 │   ├── 06-网络与SSH打通.md
-│   └── 07-坑位速查表.md
+│   ├── 07-坑位速查表.md
+│   └── 08-自训pose模型与挂墙场景.md   # ← 本阶段（量化bug/ROI/旋转/640→480/挂墙结论）
 ├── code/                      # 全部自研源码
 │   ├── streaming/            # 推流程序（手检/分类/关键点）
 │   ├── keypoint/             # 关键点手势识别
@@ -45,9 +57,9 @@
 │   ├── training/             # 训练/ONNX转换/校准脚本
 │   └── build/                # 全部编译脚本
 ├── deploy/                    # 可部署产物
-│   ├── models/               # cvimodel 模型
+│   ├── models/               # cvimodel 模型（含自训 best_rot_480_int8_cv181x）
 │   └── configs/              # model_factory.json 等
-├── timeline/                  # 验证日志（#0-#72 完整）
+├── timeline/                  # 验证日志（#0-#128 完整）
 └── assets/                    # 截图/示意图
 ```
 
@@ -89,7 +101,7 @@ sshpass -p milkv ssh root@<board> 'LD_LIBRARY_PATH=/mnt/system/lib:/mnt/system/u
 
 ## 交付物清单
 
-- ✅ 完整验证日志（#0-#89，`timeline/`）
+- ✅ 完整验证日志（#0-#128，`timeline/`）
 - ✅ 运行中的推流程序源码（`code/streaming/`）
 - ✅ 关键点手势识别（`code/keypoint/`）
 - ✅ 训练 + ONNX→cvimodel 转换脚本（`code/training/`）

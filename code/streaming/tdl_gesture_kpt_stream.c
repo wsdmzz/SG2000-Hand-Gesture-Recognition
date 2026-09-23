@@ -1,9 +1,8 @@
 /*
- * tdl_gesture_kpt_stream.c - 手部关键点手势识别 + MJPEG 推流（官方 9 类）
- * 流程: VI/VPSS(手工)→VPSS Chn0取帧→TDL_Detection(手部)
- *       →TDL_Keypoint(KEYPOINT_HAND, 21关键点)→42坐标写bin→TDL_ReadBin(FP32)
- *       →TDL_Classification(CLS_KEYPOINT_HAND_GESTURE, 9类手势)
- * 关键点分类输入是 42 个手部关键点坐标(不受ROI裁剪/光照/背景干扰), 根治图像分类的"偏fist"问题
+ * tdl_gesture_kpt_stream.c - 自训 YOLOv8n-pose 单模型手势识别 + MJPEG 推流
+ * 流程: VI/VPSS(手工)→VPSS Chn0取帧→bgr→letterbox 480→自训 best480 cvimodel(裸 cviruntime)
+ *       →decode(DFL softmax+sigmoid)→21关键点→fa手指角度→B二值化(舵机管道)/G手势稳定输出
+ * 单模型输出 det_raw(1,71,4725)+kpt_raw(1,63,4725), 7 手势类(gesture_0..6)
  * 用法: ./tdl_gesture_kpt_stream <port>
  * 浏览器: http://<board>:8881/
  */
@@ -20,6 +19,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <math.h>
 
 #include "tdl_sdk.h"
 #include "tdl_utils.h"
@@ -41,15 +41,15 @@
 #define VPSS_GRP	0
 #define VPSS_CHN	VPSS_CHN0
 
-#define MODEL_JSON	"/mnt/data/model_factory.json"
-#define MODEL_DIR	"/mnt/data/models/cv181x/"
-#define MODEL_HAND	MODEL_DIR "yolov8n_det_hand_384_640_INT8_cv181x.cvimodel"
-#define MODEL_KPT	MODEL_DIR "keypoint_hand_128_128_INT8_cv181x.cvimodel"
-#define MODEL_GEST	MODEL_DIR "cls_keypoint_hand_gesture_1_42_INT8_cv181x.cvimodel"
-#define KPT_BIN_TMP	"/tmp/kpt.bin"
+#define MODEL_POSE	"/mnt/data/models/cv181x/best480_int8_cv181x.cvimodel"
+#define POSE_SZ		480
+#define POSE_ANCH	4725	/* 60²+30²+15² */
+#define POSE_NCLS	7
 
-/* 官方 9 类关键点手势: 0:fist,1:five,2:four,3:none,4:ok,5:one,6:three,7:three2,8:two */
-static const char *gname(int id){ switch(id){case 0:return"fist";case 1:return"five";case 2:return"four";case 3:return"none";case 4:return"ok";case 5:return"one";case 6:return"three";case 7:return"three2";case 8:return"two";default:return"?";} }
+/* 自训 7 类: 0:gesture_0(拳) .. 6:gesture_6, 训练data.yaml同名 */
+	static const char *gname(int id){ switch(id){case 0:return"g0";case 1:return"g1";case 2:return"g2";case 3:return"g3";case 4:return"g4";case 5:return"g5";case 6:return"g6";default:return"?";} }
+	/* 7 类稳定手势名（跟随 G 判定输出，仅 5 帧确认后变化，推流标签用） */
+	static const char *g7name(int id){ switch(id){case 0:return"FIST";case 1:return"ONE";case 2:return"TWO";case 3:return"THREE";case 4:return"FOUR";case 5:return"FIVE";case 6:return"LIKE";default:return"NONE";} }
 
 static volatile int g_run = 1;
 static void sig_handler(int s){ (void)s; g_run=0; }
@@ -66,124 +66,311 @@ static void push_jpeg_to_http(const unsigned char *data, size_t len)
 	if (len <= sizeof(g_jpg)) { memcpy(g_jpg, data, len); g_jpg_len = len; }
 	pthread_mutex_unlock(&g_jpg_mtx);
 }
-/* ---- 静态 buffer 用于裁剪ROI→NV21---- */
-static unsigned char g_roi_nv21[128*128*3/2 + 64];
-static VIDEO_FRAME_INFO_S g_roi_frame;
+/* ---- 自训 YOLOv8n-pose 单模型(裸 cviruntime, 480×480 INT8) ---- */
+static CVI_MODEL_HANDLE g_pose_model = NULL;
+static CVI_TENSOR *g_pose_in=NULL,*g_pose_out=NULL;
+static int32_t g_pose_in_num=0,g_pose_out_num=0;
 
-/* ---- 裸 cviruntime 关键点 + 关键点分类(绕开 TDL 预处理 bug) ---- */
-static CVI_MODEL_HANDLE g_kpt_model = NULL, g_cls_model = NULL;
-static CVI_TENSOR *g_kpt_in=NULL,*g_kpt_out=NULL; int32_t g_kpt_in_num=0,g_kpt_out_num=0;
-static CVI_TENSOR *g_cls_in=NULL,*g_cls_out=NULL; int32_t g_cls_in_num=0,g_cls_out_num=0;
-
-static int kpt_nn_init(const char *kpt_model, const char *cls_model)
+static int pose_nn_init(void)
 {
 	CVI_RC rc;
-	rc=CVI_NN_RegisterModel(kpt_model,&g_kpt_model);
-	if(rc!=CVI_RC_SUCCESS){printf("kpt RegisterModel %#x\n",rc);return -1;}
-	rc=CVI_NN_GetInputOutputTensors(g_kpt_model,&g_kpt_in,&g_kpt_in_num,&g_kpt_out,&g_kpt_out_num);
-	if(rc!=CVI_RC_SUCCESS){printf("kpt GetIO %#x\n",rc);return -1;}
-	rc=CVI_NN_RegisterModel(cls_model,&g_cls_model);
-	if(rc!=CVI_RC_SUCCESS){printf("cls RegisterModel %#x\n",rc);return -1;}
-	rc=CVI_NN_GetInputOutputTensors(g_cls_model,&g_cls_in,&g_cls_in_num,&g_cls_out,&g_cls_out_num);
-	if(rc!=CVI_RC_SUCCESS){printf("cls GetIO %#x\n",rc);return -1;}
-	printf("kpt_in fmt=%d qs=%.3f | cls_in fmt=%d qs=%.3f\n",
-	       (int)g_kpt_in[0].fmt,g_kpt_in[0].qscale,(int)g_cls_in[0].fmt,g_cls_in[0].qscale);
+	rc=CVI_NN_RegisterModel(MODEL_POSE,&g_pose_model);
+	if(rc!=CVI_RC_SUCCESS){printf("pose RegisterModel %#x\n",rc);return -1;}
+	rc=CVI_NN_GetInputOutputTensors(g_pose_model,&g_pose_in,&g_pose_in_num,&g_pose_out,&g_pose_out_num);
+	if(rc!=CVI_RC_SUCCESS){printf("pose GetIO %#x\n",rc);return -1;}
+	for(int i=0;i<g_pose_out_num;i++){
+		printf("pose_out[%d] %s count=%zu fmt=%d qs=%.6f\n", i,
+		       g_pose_out[i].name?g_pose_out[i].name:"?", g_pose_out[i].count,
+		       (int)g_pose_out[i].fmt, g_pose_out[i].qscale);
+	}
 	return 0;
 }
 
-/* 裸 cviruntime 关键点推理 + 手势分类
- * bgr_roi: 手部 ROI(BGR, 任意尺寸), 输出 kpt[21][2] 归一化坐标 + label
- * 返回 0 成功 */
-static int kpt_nn_infer(cv::Mat &bgr_roi, float kpt_out[21][2], int *label)
+/* 手指弯曲角度（3 关键点夹角，单位度）
+ * 关键点为归一化坐标(0~1)，夹角不受缩放影响 */
+static float finger_angle(float kpt[21][2], int a, int b, int c)
 {
-	if(!g_kpt_model||!g_cls_model) return -1;
-	cv::Mat res;
-	cv::resize(bgr_roi, res, cv::Size(128,128), 0,0, cv::INTER_LINEAR);
-	/* BGR→RGB + ImageNet 归一化(NCHW) → int8 × qscale(和官方 keypoint_hand 一致) */
+	float bax = kpt[a][0] - kpt[b][0];
+	float bay = kpt[a][1] - kpt[b][1];
+	float bcx = kpt[c][0] - kpt[b][0];
+	float bcy = kpt[c][1] - kpt[b][1];
+	float dot = bax*bcx + bay*bcy;
+	float mag = sqrtf(bax*bax+bay*bay) * sqrtf(bcx*bcx+bcy*bcy);
+	if (mag < 1e-6f) return 180.0f;
+	float cos_a = dot / mag;
+	if (cos_a > 1.0f) cos_a = 1.0f;
+	if (cos_a < -1.0f) cos_a = -1.0f;
+	return acosf(cos_a) * 180.0f / 3.14159265f;
+}
+
+/* 手指角度 → 舵机角度映射
+ * 人手伸直(fa≈180°) → 舵机伸直(sa=180°)
+ * 人手弯曲(fa≈30°)  → 舵机弯曲(sa=0°) */
+static int finger_to_servo(float fa)
+{
+	int sa = (int)((fa - 30.0f) * 180.0f / 150.0f);
+	if (sa < 0) sa = 0;
+	if (sa > 180) sa = 180;
+	return sa;
+}
+
+/* ============ 自训 YOLOv8n-pose 整帧推理 ============ */
+/* anchor 表: int 格子坐标 + stride, 层序 P3(60×60,s8) P4(30×30,s16) P5(15×15,s32), row-major */
+static float g_ax[POSE_ANCH], g_ay[POSE_ANCH], g_as[POSE_ANCH];
+
+/* ---- 固定 ROI (方案A, 验证 #122) ----------------------------------------
+ * 实测: 全图直送 pose 模型 bsc≈0.005(检不出); 裁到手占满后 bsc≈0.92(稳定)。
+ * 故送模型前先裁出固定窗口。默认值来自实测手位(640x384 坐标系):
+ *   手中心(260,208) 边长约278 → 取 280。宽容区 220~280(见 #122)。
+ * 可用命令行覆盖: ./tdl_gesture_kpt_stream <port> [cx cy side] */
+static int g_roi_cx = 260, g_roi_cy = 208, g_roi_side = 280;
+static int g_roi_x = 0, g_roi_y = 0;   /* 本次实际裁剪左上角, 供坐标映射 */
+
+/* ---- 自适应 ROI (验证 #127): 固定 ROI 无法适应距离变化 ----
+ * 实验(#127): 手 272px→0.94, 136px→0.90, 82px→0.78, 60px→0.0003(失败)
+ *             而自适应尺寸在 60px 仍 0.94。
+ * 策略: 上帧成功的尺寸本帧优先 → 通常只需 1 次推理(帧率不掉);
+ *       失败才依次试其它尺寸(手远近变化时最多 3 次)。 */
+#define POSE_TH      0.30f              /* 检出手的置信度阈值 */
+#define ROI_NSZ      3
+static const int g_roi_cand[ROI_NSZ] = {280, 170, 100};   /* 近 / 中 / 远 */
+static int g_roi_idx = 0;               /* 上帧成功的候选索引 */
+
+/* 调试: --dump 时每 20 帧保存 ROI 与 letterbox 图到 /tmp, 供离线复现分析 */
+static int g_dump = 0;
+static int g_dump_seq = 0;
+
+/* 方向对齐 (验证 #125): 模型只见过「手臂从左往右/手指朝右」的朝向,
+ * 实测换方向后 sc 从 0.81 掉到 0.52。此处把 ROI 旋转到训练方向再送模型。
+ *   0   = 不旋转 (画面已经是训练方向)
+ *   90  = 顺时针 90°  (手指朝上 → 朝右)
+ *   270 = 逆时针 90°  (手指朝下 → 朝右)
+ * 可用 --rot 90 / --rot 270 开启。ROI 为正方形, 故旋转后尺寸不变。 */
+static int g_rot = 0;
+
+/* 旋转图坐标 → ROI 原图坐标 (与 g_rot 相反变换)
+ * rw/rh 为旋转后图像的宽/高 */
+static inline void unrot_pt(float &x, float &y, int rw, int rh)
+{
+	if (g_rot == 90) {
+		/* dst(x',y') = src(rh-1-y, x) → 反解 x=y', y=rw-1-x'  (rw=原图高) */
+		float xp = x, yp = y;
+		x = yp;
+		y = (float)rw - 1.0f - xp;
+	} else if (g_rot == 270) {
+		/* dst(x',y') = src(y, rw-1-x) → 反解 x=rh-1-y', y=x'  (rh=原图宽) */
+		float xp = x, yp = y;
+		x = (float)rh - 1.0f - yp;
+		y = xp;
+	}
+}
+static int pose_anchor_init(void)
+{
+	int k=0;
+	const int W[3]={60,30,15};
+	const float S[3]={8.f,16.f,32.f};
+	for(int l=0;l<3;l++)
+		for(int y=0;y<W[l];y++)
+			for(int x=0;x<W[l];x++){
+				g_ax[k]=(float)x; g_ay[k]=(float)y; g_as[k]=S[l]; k++;
+			}
+	if(k!=POSE_ANCH){printf("anchor cnt %d != %d\n",k,POSE_ANCH);return -1;}
+	return 0;
+}
+
+/* pose_infer_roi: 单次推理 — 用指定边长裁剪 ROI → letterbox480 → 量化 → Forward → decode
+ * 返回 top1 类别置信度 bsc; <0 表示无法推理
+ * 输出(全图归一化坐标): kpt[21][2], box[4]像素, *pscore, *pcls */
+static float pose_infer_roi(cv::Mat &bgr, int roi_side, float kpt_out[21][2],
+                            int box[4], float *pscore, int *pcls)
+{
+	if(!g_pose_model) return -1.0f;
+	const int full_w=bgr.cols, full_h=bgr.rows;
+	/* --- 0. ROI 裁剪 (边长 roi_side, 中心 g_roi_cx/cy) --- */
+	int rx1=g_roi_cx-roi_side/2, ry1=g_roi_cy-roi_side/2;
+	int rx2=rx1+roi_side, ry2=ry1+roi_side;
+	if(rx1<0)rx1=0; if(ry1<0)ry1=0;
+	if(rx2>full_w)rx2=full_w; if(ry2>full_h)ry2=full_h;
+	if(rx2-rx1<64||ry2-ry1<64) return -1.0f;
+	static cv::Mat roi_img, roi_src;
+	roi_img = bgr(cv::Rect(rx1,ry1,rx2-rx1,ry2-ry1));
+	if (g_rot == 90)       cv::rotate(roi_img, roi_src, cv::ROTATE_90_CLOCKWISE);
+	else if (g_rot == 270) cv::rotate(roi_img, roi_src, cv::ROTATE_90_COUNTERCLOCKWISE);
+	else                   roi_src = roi_img;
+	g_roi_x=rx1; g_roi_y=ry1;
+	const int fw=roi_src.cols, fh=roi_src.rows;   /* 旋转后尺寸(正方形, 不变) */
+	/* --- 1. letterbox 480×480 (pad 114, 居中) --- */
+	const float scale=fminf((float)POSE_SZ/fw,(float)POSE_SZ/fh);
+	const int nw=(int)(fw*scale+0.5f), nh=(int)(fh*scale+0.5f);
+	const int px=(POSE_SZ-nw)/2, py=(POSE_SZ-nh)/2;
+	static cv::Mat letter;
+	letter = cv::Mat(POSE_SZ,POSE_SZ,CV_8UC3,cv::Scalar(114,114,114));
 	{
-		const float imean[3]={123.675f,116.28f,103.53f};
-		const float istd[3] ={58.395f,57.12f,57.375f};
-		float qs=g_kpt_in[0].qscale;
-		int8_t *d=(int8_t*)g_kpt_in[0].sys_mem;
-		int hw=128*128;
+		cv::Mat rsz;
+		cv::resize(roi_src,rsz,cv::Size(nw,nh),0,0,cv::INTER_LINEAR);
+		rsz.copyTo(letter(cv::Rect(px,py,nw,nh)));
+	}
+	/* 调试 dump: ROI 原图 + 送模型的 480x480, 每 20 帧一组 */
+	if (g_dump) {
+		if (g_dump_seq % 20 == 0) {
+			char fn[80];
+			snprintf(fn, sizeof(fn), "/tmp/roi_%04d.jpg", g_dump_seq / 20);
+			cv::imwrite(fn, roi_img);
+			snprintf(fn, sizeof(fn), "/tmp/lb_%04d.jpg", g_dump_seq / 20);
+			cv::imwrite(fn, letter);
+		}
+		g_dump_seq++;
+	}
+	/* --- 2. 量化: RGB NCHW, v=pixel/255∈[0,1], q=v×qscale ---
+	 * qscale 语义: 归一化值→INT8 的量化尺度, 模板 max_abs≈1.0 → qscale≈127
+	 * 故 q = (pixel/255)×qscale, 即 kf = qscale/255 ∈ [0,127]
+	 * 验证 #116: 旧式 kf=1/(255*qscale) 会把整幅图压成全 0(实测非零 0/691200),
+	 *             模型实际只在看空白图 → 舵机抖动但不跟随手势 */
+	{
+		const float qs=g_pose_in[0].qscale;
+		const float kf=qs/255.0f;          /* q = pixel×kf */
+		int8_t *d=(int8_t*)g_pose_in[0].sys_mem;
+		const int hw=POSE_SZ*POSE_SZ;
 		for(int c=0;c<3;c++){
-			for(int y=0;y<128;y++){
-				const uchar *row=res.ptr<uchar>(y);
-				for(int x=0;x<128;x++){
-					float rgb;
-					if(c==0) rgb=(float)row[x*3+2]; /* R */
-					else if(c==1) rgb=(float)row[x*3+1]; /* G */
-					else rgb=(float)row[x*3+0]; /* B */
-					float v=(rgb-imean[c])/istd[c];
-					float q=v*qs; if(q>127)q=127; if(q<-128)q=-128;
-					d[(c*hw+y)*128+x]=(int8_t)q;
+			const int ch=(c==0)?2:(c==1?1:0);   /* RGB: BGR Mat 中 R=+2 */
+			for(int y=0;y<POSE_SZ;y++){
+				const uchar *row=letter.ptr<uchar>(y);
+				int8_t *dst=d+c*hw+y*POSE_SZ;
+				for(int x=0;x<POSE_SZ;x++){
+					float q=row[x*3+ch]*kf;
+					if(q>127.f)q=127.f; if(q<-128.f)q=-128.f;
+					dst[x]=(int8_t)(q+0.5f*(q>=0?1:-1));
 				}
 			}
 		}
 	}
-	if(CVI_NN_Forward(g_kpt_model,g_kpt_in,g_kpt_in_num,g_kpt_out,g_kpt_out_num)!=CVI_RC_SUCCESS) return -1;
-	float *kpt=(float*)g_kpt_out[0].sys_mem;
-	for(int m=0;m<21;m++){ kpt_out[m][0]=kpt[m*2]; kpt_out[m][1]=kpt[m*2+1]; }
-	/* 关键点分类: int8 = qscale * 坐标(与官方 HandKeypointClassification 一致) */
+	/* 调试: 量化统计 (验证 #116 量化修复; 只打前 3 帧; 走 stderr 不干扰 G 管道) */
 	{
-		float qs=g_cls_in[0].qscale;
-		int8_t *d=(int8_t*)g_cls_in[0].sys_mem;
-		for(int i=0;i<42;i++){
-			float tf=qs*kpt[i];
-			if(tf<-128) d[i]=-128;
-			else if(tf>127) d[i]=128;
-			else d[i]=(int8_t)lroundf(tf);
+		static int s_qdbg = 0;
+		if (s_qdbg < 3) {
+			int nz = 0, mx = -128;
+			int8_t *dd = (int8_t*)g_pose_in[0].sys_mem;
+			for (size_t k = 0; k < g_pose_in[0].count; k++) {
+				if (dd[k] != 0) nz++;
+				if (dd[k] > mx) mx = dd[k];
+			}
+			fprintf(stderr, "[DBG-QUANT] qscale=%.1f kf=%.6f nonzero=%d/%zu max=%d\n",
+			        g_pose_in[0].qscale, g_pose_in[0].qscale/255.0f,
+			        nz, g_pose_in[0].count, mx);
+			s_qdbg++;
 		}
 	}
-	if(CVI_NN_Forward(g_cls_model,g_cls_in,g_cls_in_num,g_cls_out,g_cls_out_num)!=CVI_RC_SUCCESS) return -1;
-	float *oc=(float*)g_cls_out[0].sys_mem;
-	int best=0; float bz=-1e30f;
-	for(int i=0;i<9;i++) if(oc[i]>bz){bz=oc[i];best=i;}
-	*label=best;
-	return 0;
+	/* --- 3. Forward --- */
+	if(CVI_NN_Forward(g_pose_model,g_pose_in,g_pose_in_num,g_pose_out,g_pose_out_num)!=CVI_RC_SUCCESS){
+		printf("Forward fail\n");return -1;
+	}
+	/* --- 4. 找 det/kpt 输出 tensor --- */
+	float *det=NULL,*kptr=NULL;
+	for(int i=0;i<g_pose_out_num;i++){
+		if(g_pose_out[i].count==(size_t)71*POSE_ANCH) det=(float*)g_pose_out[i].sys_mem;
+		else if(g_pose_out[i].count==(size_t)63*POSE_ANCH) kptr=(float*)g_pose_out[i].sys_mem;
+	}
+	if(!det||!kptr){printf("pose out tensor miss\n");return -1;}
+	/* --- 5. decode: top1 锚点(7类 sigmoid) --- */
+	int best=-1,bcls=0; float bsc=0.f;
+	for(int i=0;i<POSE_ANCH;i++){
+		for(int c=0;c<POSE_NCLS;c++){
+			float s=1.f/(1.f+expf(-det[(64+c)*POSE_ANCH+i]));
+			if(s>bsc){bsc=s;best=i;bcls=c;}
+		}
+	}
+	/* 调试: 置信度 (每次尝试计数, 带 roi 尺寸便于观察尺度切换) */
+	{
+		static int s_dbg_cnt = 0;
+		if (s_dbg_cnt++ % 6 == 0) {
+			fprintf(stderr, "[DBG-DET] roi=%d best=%d cls=%d bsc=%.4f (TH=%.2f)\n",
+			        roi_side, best, bcls, bsc, (double)POSE_TH);
+			fflush(stderr);
+		}
+	}
+	if(bsc<POSE_TH) return bsc;   /* 未达阈值: 返回 bsc 交外层试其它尺度 */
+	/* --- 6. DFL softmax → box --- */
+	float cx,cy,w,h;
+	{
+		float dist[4];
+		for(int k=0;k<4;k++){
+			const float *pr=det+(k*16)*POSE_ANCH+best;
+			float mx=pr[0]; for(int j=1;j<16;j++) if(pr[j]>mx)mx=pr[j];
+			float sum=0.f,e[16];
+			for(int j=0;j<16;j++){e[j]=expf(pr[j]-mx);sum+=e[j];}
+			float ex=0.f; for(int j=0;j<16;j++) ex+=e[j]*(float)j/sum;
+			dist[k]=ex;
+		}
+		cx=(g_ax[best]+0.5f+(dist[2]-dist[0])*0.5f)*g_as[best];
+		cy=(g_ay[best]+0.5f+(dist[3]-dist[1])*0.5f)*g_as[best];
+		w =(dist[0]+dist[2])*g_as[best];
+		h =(dist[1]+dist[3])*g_as[best];
+	}
+	/* letterbox 坐标 → 旋转图坐标 → ROI 原图坐标 → 全图坐标 */
+	{
+		float ax=(cx-w*0.5f-px)/scale, ay=(cy-h*0.5f-py)/scale;
+		float bx=(cx+w*0.5f-px)/scale, by=(cy+h*0.5f-py)/scale;
+		unrot_pt(ax, ay, fw, fh);
+		unrot_pt(bx, by, fw, fh);
+		/* 旋转是镜像变换, 反解后需重排角点 */
+		float x1=fminf(ax,bx)+g_roi_x, x2=fmaxf(ax,bx)+g_roi_x;
+		float y1=fminf(ay,by)+g_roi_y, y2=fmaxf(ay,by)+g_roi_y;
+		box[0]=x1<0?0:(int)x1; box[1]=y1<0?0:(int)y1;
+		box[2]=x2>full_w?full_w:(int)x2; box[3]=y2>full_h?full_h:(int)y2;
+	}
+	/* --- 7. kpt: ROI 内 letterbox 坐标 → 全图归一化坐标 --- */
+	for(int m=0;m<21;m++){
+		float kx=(kptr[(m*3+0)*POSE_ANCH+best]*2.f+g_ax[best])*g_as[best];
+		float ky=(kptr[(m*3+1)*POSE_ANCH+best]*2.f+g_ay[best])*g_as[best];
+		float ux=(kx-px)/scale, uy=(ky-py)/scale;
+		unrot_pt(ux, uy, fw, fh);
+		kpt_out[m][0]=(ux+g_roi_x)/full_w;
+		kpt_out[m][1]=(uy+g_roi_y)/full_h;
+	}
+	*pscore=bsc; *pcls=bcls;
+	return bsc;
 }
 
-/* 从 BGR Mat 裁剪+resize 到 w,h, 转 NV21 填入 g_roi_frame */
-static TDLImage make_roi_image(cv::Mat &bgr, int bx1,int by1,int bx2,int by2,int w,int h)
+/* pose_nn_infer: 自适应多尺度 ROI — 上帧成功的尺寸优先, 达标即早停。
+ * 返回 0=检到手, -1=所有候选都不达标。 */
+static int pose_nn_infer(cv::Mat &bgr, float kpt_out[21][2], int box[4],
+                         float *pscore, int *pcls)
 {
-	cv::Rect r(bx1,by1,bx2-bx1,by2-by1);
-	cv::Mat roi = bgr(r).clone();
-	cv::Mat res;
-	cv::resize(roi, res, cv::Size(w,h));
-	/* BGR→NV21 */
-	int ylen=w*h, uvlen=w*h/2;
-	for(int y=0;y<h;y++){
-		for(int x=0;x<w;x++){
-			cv::Vec3b p=res.at<cv::Vec3b>(y,x);
-			int B=p[0],G=p[1],R=p[2];
-			int Y=((66*R+129*G+25*B+128)>>8)+16;
-			g_roi_nv21[y*w+x]=(unsigned char)(Y<0?0:(Y>255?255:Y));
+	if(!g_pose_model) return -1;
+	float best_sc = -1.0f;
+	int   best_idx = -1;
+	float k_best[21][2];
+	int   b_best[4];
+	float p_best = 0.f;
+	int   c_best = 0;
+
+	for (int k = 0; k < ROI_NSZ; k++) {
+		int idx = (g_roi_idx + k) % ROI_NSZ;   /* 上帧成功者优先 */
+		float kk[21][2];
+		int   bb[4];
+		float ps = 0.f;
+		int   pc = 0;
+		float sc = pose_infer_roi(bgr, g_roi_cand[idx], kk, bb, &ps, &pc);
+		if (sc < 0.f) continue;
+		if (sc > best_sc) {                    /* 记录最佳(达标即返回, 否则留作备选) */
+			best_sc = sc; best_idx = idx;
+			memcpy(k_best, kk, sizeof(k_best));
+			memcpy(b_best, bb, sizeof(b_best));
+			p_best = ps; c_best = pc;
+		}
+		if (sc >= POSE_TH) {                   /* 达标 → 早停 */
+			if (g_roi_idx != idx) {
+				fprintf(stderr, "[ROI] 切换 %d → %d\n", g_roi_cand[g_roi_idx], g_roi_cand[idx]);
+				fflush(stderr);
+				g_roi_idx = idx;
+			}
+			memcpy(kpt_out, k_best, sizeof(k_best));
+			memcpy(box, b_best, sizeof(b_best));
+			*pscore = p_best; *pcls = c_best;
+			return 0;
 		}
 	}
-	/* NV21 UV 交错 (VU) 每2x2共用一组 */
-	for(int y=0;y<h;y+=2){
-		for(int x=0;x<w;x+=2){
-			int v=0,u=0;
-			{int xx=x,yy=y; cv::Vec3b p=res.at<cv::Vec3b>(yy,xx); int B=p[0],G=p[1],R=p[2];
-			 int _v=((112*R-94*G-18*B+128)>>8)+128; int _u=((-38*R-74*G+112*B+128)>>8)+128; v+=_v;u+=_u;}
-			{int xx=x+1,yy=y; if(xx<w){cv::Vec3b p=res.at<cv::Vec3b>(yy,xx); int B=p[0],G=p[1],R=p[2]; v+=((112*R-94*G-18*B+128)>>8)+128;u+=((-38*R-74*G+112*B+128)>>8)+128;}}
-			{int xx=x,yy=y+1; if(yy<h){cv::Vec3b p=res.at<cv::Vec3b>(yy,xx); int B=p[0],G=p[1],R=p[2]; v+=((112*R-94*G-18*B+128)>>8)+128;u+=((-38*R-74*G+112*B+128)>>8)+128;}}
-			{int xx=x+1,yy=y+1; if(xx<w&&yy<h){cv::Vec3b p=res.at<cv::Vec3b>(yy,xx); int B=p[0],G=p[1],R=p[2]; v+=((112*R-94*G-18*B+128)>>8)+128;u+=((-38*R-74*G+112*B+128)>>8)+128;}}
-			v=v/4; u=u/4;
-			int uv_off=ylen + (y/2)*(w/2) + (x/2);
-			g_roi_nv21[uv_off]=(unsigned char)(v<0?0:(v>255?255:v));   /* V 先 */
-			g_roi_nv21[uv_off+ (w/2)*(h/2)]=(unsigned char)(u<0?0:(u>255?255:u)); /* U 第二平面 */
-		}
-	}
-	/* 填 VIDEO_FRAME (NV21: PIXEL_FORMAT_NV21=19) */
-	memset(&g_roi_frame,0,sizeof(g_roi_frame));
-	g_roi_frame.stVFrame.u32Width=w; g_roi_frame.stVFrame.u32Height=h;
-	g_roi_frame.stVFrame.enPixelFormat=(PIXEL_FORMAT_E)19; /* NV21 */
-	g_roi_frame.stVFrame.u32Stride[0]=w; g_roi_frame.stVFrame.u32Length[0]=ylen;
-	g_roi_frame.stVFrame.u32Length[1]=uvlen;
-	g_roi_frame.stVFrame.pu8VirAddr[0]=g_roi_nv21;
-	g_roi_frame.stVFrame.enVideoFormat=VIDEO_FORMAT_LINEAR;
-	return TDL_WrapFrame(&g_roi_frame,false,false);
+	return -1;   /* 全部候选均未达标 → 判无手 */
 }
 /* ---- HTTP 线程: 独立 accept + 断线检测 + 发送最新JPEG ---- */
 static void *http_thread(void *arg)
@@ -248,6 +435,22 @@ static void *http_thread(void *arg)
 int main(int argc, char *argv[])
 {
 	int port = (argc>1)?atoi(argv[1]):8881;
+	/* 可选: ROI 覆盖 ./tdl_gesture_kpt_stream <port> [roi_cx roi_cy roi_side]
+	 * ROI 为 640x384 坐标系; 默认(260,208,280) 来自实测手位(验证 #122)
+	 * 另可选 --dump: 每 20 帧保存 ROI/letterbox 图到 /tmp 供离线分析 */
+	{
+		int npos = 0, pos[3] = {0, 0, 0};
+		for (int i = 2; i < argc; i++) {
+			if (strcmp(argv[i], "--dump") == 0) { g_dump = 1; continue; }
+			if (strncmp(argv[i], "--rot", 5) == 0) { g_rot = atoi(argv[i] + 5); continue; }
+			if (npos < 3) pos[npos++] = atoi(argv[i]);
+		}
+		if (npos >= 3) {
+			g_roi_cx = pos[0]; g_roi_cy = pos[1]; g_roi_side = pos[2];
+			if (g_roi_side < 64) g_roi_side = 64;
+			if (g_roi_side > 640) g_roi_side = 640;
+		}
+	}
 	CVI_S32 ret; int opt=1;
 	SAMPLE_INI_CFG_S stIniCfg;
 	SAMPLE_VI_CONFIG_S stViConfig;
@@ -262,6 +465,10 @@ int main(int argc, char *argv[])
 
 	signal(SIGINT,sig_handler); signal(SIGTERM,sig_handler); signal(SIGPIPE,SIG_IGN);
 	printf("=== TDL Gesture + MJPEG stream (port %d) ===\n", port);
+	printf("ROI: cx=%d cy=%d side=%d (640x384 坐标系; 改此值: %s <port> cx cy side)\n",
+	       g_roi_cx, g_roi_cy, g_roi_side, argv[0]);
+	printf("旋转对齐: %d° %s (--rot 0|90|270; 90=顺时针 手指朝上→朝右)\n",
+	       g_rot, g_rot ? "(已开启)" : "(未开启, 画面需已是训练方向)");
 
 	/* 0. 清理残留 VPSS */
 	{ CVI_S32 g; for(g=0;g<(CVI_S32)VPSS_MAX_GRP_NUM;g++){ CVI_VPSS_StopGrp(g); CVI_VPSS_DestroyGrp(g); } usleep(200*1000); }
@@ -316,15 +523,10 @@ int main(int argc, char *argv[])
 	pthread_t hthr;
 	pthread_create(&hthr,NULL,http_thread,NULL);
 
-	/* 6. TDL 初始化 */
-	h=TDL_CreateHandle(0);
-	if(!h){printf("CreateHandle fail\n");goto err_handle;}
-	if(TDL_LoadModelConfig(h,MODEL_JSON)!=0)printf("WARN LoadModelConfig\n");
-	if(TDL_OpenModel(h,TDL_MODEL_YOLOV8N_DET_HAND,MODEL_HAND,MODEL_JSON,0)!=0){printf("OpenModel HAND fail\n");goto err_handle;}
-	TDL_SetModelThreshold(h,TDL_MODEL_YOLOV8N_DET_HAND,0.45f);
-	/* 关键点 + 手势分类: 裸 cviruntime(绕开 TDL_Keypoint VPSS 预处理 bug, 已验证可靠) */
-	if(kpt_nn_init(MODEL_KPT,MODEL_GEST)!=0){printf("kpt_nn_init fail\n");goto err_handle;}
-	printf("TDL models OK (det via TDL + kpt/cls via cviruntime)\n"); fflush(stdout);
+	/* 6. 自训 pose 单模型(裸 cviruntime) */
+	if(pose_nn_init()!=0){printf("pose_nn_init fail\n");goto err_handle;}
+	if(pose_anchor_init()!=0){printf("anchor fail\n");goto err_handle;}
+	printf("pose model OK (best480 INT8 cviruntime)\n"); fflush(stdout);
 
 	/* 7. 主循环: 取帧→检测→分类→画框→软编码→push_jpeg */
 	while(g_run){
@@ -345,105 +547,123 @@ int main(int argc, char *argv[])
 
 		void*va0=(f->pu8VirAddr[0])?(void*)f->pu8VirAddr[0]:CVI_SYS_Mmap(f->u64PhyAddr[0],(CVI_U32)ylen+(CVI_U32)(fw*fh/2)+64);
 		if(!va0){CVI_VPSS_ReleaseChnFrame(VPSS_GRP,VPSS_CHN,&stVpssFrame);continue;}
-		unsigned char*yuv=(unsigned char*)va0;
 
-		cv::Mat nv21(fh*3/2,fw,CV_8UC1,yuv);
-		cv::Mat bgr;
+		/* 提前声明变量避免 continue 跨越初始化 */
+		unsigned char*yuv=NULL;
+		cv::Mat nv21,bgr;
+
+		yuv=(unsigned char*)va0;
+		nv21=cv::Mat(fh*3/2,fw,CV_8UC1,yuv);
 		cv::cvtColor(nv21,bgr,cv::COLOR_YUV2BGR_NV21);
 
-		/* TDL 手部检测 */
-		TDLImage tdl_img=TDL_WrapFrame(&stVpssFrame,false,false);
-		TDLObject obj={0};
-		uint32_t nh=0;
-		int drc=TDL_Detection(h,TDL_MODEL_YOLOV8N_DET_HAND,tdl_img,&obj);
-		if(drc==0) nh=obj.size;
+		/* 自训 pose 单模型: 整帧推理(检测+关键点+类别) */
+		float kpt[21][2];
+		int box[4];
+		float psc=0.f; int pcl=-1;
+		int have_hand = (pose_nn_infer(bgr, kpt, box, &psc, &pcl) == 0);
+		uint32_t nh = have_hand ? 1 : 0;
 
-		/* ===== 手框合并(NMS): 一手可能被检成分散的多个框(手指/手掌), 合并为覆盖完整手的最大框 ===== */
-		struct { int x1,y1,x2,y2; float score; } merged[8];
-		int nm=0;
-		/* 简易 NMS: 对每个框, 若与某合并框 IoU 高则扩展合并框, 否则新建.
-		   把同一只手的分散框(手指框+手掌框)合并为一个包络框覆盖全手. */
-		{
-			for(uint32_t i=0;i<nh&&i<16;i++){
-				int bx1=(int)obj.info[i].box.x1, by1=(int)obj.info[i].box.y1,
-				    bx2=(int)obj.info[i].box.x2, by2=(int)obj.info[i].box.y2;
-				if(bx1<0){bx1=0;}if(by1<0){by1=0;}
-				if(bx2>fw){bx2=fw;}if(by2>fh){by2=fh;}
-				if(bx2<=bx1||by2<=by1) continue;
-				float sc=obj.info[i].score;
-				/* 与已有合并框求 IoU, 若重叠>0.3 或相互包含则合并(取并集) */
-				int matched=-1; float best_iou=0;
-				for(int m=0;m<nm;m++){
-					int ix1=merged[m].x1>bx1?merged[m].x1:bx1;
-					int iy1=merged[m].y1>by1?merged[m].y1:by1;
-					int ix2=merged[m].x2<bx2?merged[m].x2:bx2;
-					int iy2=merged[m].y2<by2?merged[m].y2:by2;
-					int iw=ix2-ix1, ih=iy2-iy1;
-					if(iw<=0||ih<=0) continue;
-					int inter=iw*ih;
-					int au=(merged[m].x2-merged[m].x1)*(merged[m].y2-merged[m].y1)
-					      +(bx2-bx1)*(by2-by1)-inter;
-					float iou=(float)inter/au;
-					if(iou>best_iou){best_iou=iou;matched=m;}
-				}
-				if(matched>=0 && best_iou>0.25f){
-					/* 合并: 取两个框的并集(覆盖完整手) */
-					if(bx1<merged[matched].x1) merged[matched].x1=bx1;
-					if(by1<merged[matched].y1) merged[matched].y1=by1;
-					if(bx2>merged[matched].x2) merged[matched].x2=bx2;
-					if(by2>merged[matched].y2) merged[matched].y2=by2;
-					if(sc>merged[matched].score) merged[matched].score=sc;
-				} else if(nm<8){
-					merged[nm].x1=bx1; merged[nm].y1=by1;
-					merged[nm].x2=bx2; merged[nm].y2=by2;
-					merged[nm].score=sc; nm++;
-				}
-			}
-		}
-
-		/* 只对合并后的框做手势识别(通常是1个: 完整手) */
-		for(int k=0;k<nm;k++){
-			int x1=merged[k].x1,y1=merged[k].y1,
-			    x2=merged[k].x2,y2=merged[k].y2;
-			/* 画合并后的手部框 */
-			cv::rectangle(bgr,cv::Rect(x1,y1,x2-x1,y2-y1),cv::Scalar(0,255,0),2);
-			/* 关键点模型期望 完整手占满, ROI 从合并框 + 适度扩张 */
-			int bw=x2-x1,bh=y2-y1;
-			int ext=(int)((bw>bh?bw:bh)*1.15f);
-			if(ext<48) ext=48;
-			int cx1=(x1+x2)/2-ext/2, cy1=(y1+y2)/2-ext/2;
-			if(cx1<0)cx1=0; if(cy1<0)cy1=0;
-			int cx2=cx1+ext, cy2=cy1+ext;
-			if(cx2>fw)cx2=fw; if(cy2>fh)cy2=fh;
-			if(cx2<=cx1||cy2<=cy1)continue;
+		if (have_hand) {
+			/* 画检测框 + 置信度 */
+			cv::rectangle(bgr,cv::Rect(box[0],box[1],box[2]-box[0],box[3]-box[1]),cv::Scalar(0,255,0),2);
 			{
-				cv::Mat roi_mat;
-				try {
-					cv::Rect rr(cx1,cy1,cx2-cx1,cy2-cy1);
-					roi_mat = bgr(rr).clone();
-				} catch (cv::Exception &e) { continue; }
-				/* 裸 cviruntime 关键点 + 手势分类 */
-				float kpt[21][2];
-				int fid=-1;
-				if (kpt_nn_infer(roi_mat, kpt, &fid) == 0) {
-					/* 绘制 21 个手部关键点(坐标映射回整帧 bgr) */
+				/* EMA 平滑关键点坐标，减少帧间抖动 */
+				static float kpt_ema[21][2];
+				static int kpt_init = 0;
+				if (!kpt_init) {
+					memcpy(kpt_ema, kpt, sizeof(kpt_ema));
+					kpt_init = 1;
+				} else {
+					for (int i = 0; i < 21; i++) {
+						kpt_ema[i][0] = 0.3f * kpt[i][0] + 0.7f * kpt_ema[i][0];
+						kpt_ema[i][1] = 0.3f * kpt[i][1] + 0.7f * kpt_ema[i][1];
+					}
+				}
+				memcpy(kpt, kpt_ema, sizeof(kpt_ema));
+			}
+					/* 计算 5 根手指弯曲角度 → 舵机角度 → stdout(管道给 gpio_soft_pwm) */
+					float fa[5];
+					fa[0] = finger_angle(kpt, 2, 3, 4);   /* 拇指 IP */
+					fa[1] = finger_angle(kpt, 5, 6, 7);   /* 食指 PIP */
+					fa[2] = finger_angle(kpt, 9, 10, 11); /* 中指 PIP */
+					fa[3] = finger_angle(kpt, 13, 14, 15);/* 无名指 PIP */
+					fa[4] = finger_angle(kpt, 17, 18, 19);/* 小指 PIP */
+					/* 3帧中值滤波去除异常跳变 */
+					static float fa_buf[5][3]; static int fa_ready=0;
+					if(!fa_ready){for(int i=0;i<5;i++)fa_buf[i][0]=fa_buf[i][1]=fa_buf[i][2]=fa[i];fa_ready=1;}
+					else{for(int i=0;i<5;i++){fa_buf[i][2]=fa_buf[i][1];fa_buf[i][1]=fa_buf[i][0];fa_buf[i][0]=fa[i];}}
+					for(int i=0;i<5;i++){float a=fa_buf[i][0],b=fa_buf[i][1],c=fa_buf[i][2],t;if(a>b){t=a;a=b;b=t;}if(b>c){t=b;b=c;c=t;}if(a>b){t=a;a=b;b=t;}fa[i]=b;}
+					/* 二值化+迟滞阈值 → 手指弯曲状态(0=弯,1=直) */
+					static int finger_state[5] = {0,0,0,0,0};
+					for (int i=0;i<5;i++) {
+						if (fa[i] > 150.0f) finger_state[i] = 1;
+						else if (fa[i] < 100.0f) finger_state[i] = 0;
+						/* 中间区间保持上一帧状态 */
+					}
+				fprintf(stderr, "FA %.0f %.0f %.0f %.0f %.0f | B %d %d %d %d %d\n",
+					fa[0],fa[1],fa[2],fa[3],fa[4], finger_state[0],finger_state[1],finger_state[2],finger_state[3],finger_state[4]);
+				/* #116: 自训模型 7 类逐帧输出(cls: gesture_0..6) + top1 */
+				fprintf(stderr, "POSE cls=%d(%s) sc=%.2f\n", pcl, gname(pcl), psc);
+					/* 手势判定：四指组合 → 手势 id
+					 * G0=拳(石头) G1=1 G2=2/剪刀 G3=3 G4=4 G5=5/布 G6=点赞
+					 * 4/5 靠拇指状态区分，其余拇指不参与（侧面拇指关键点不可靠）
+					 * 非法组合 gid=-1 保持上一手势 */
+					/* 稳定手势输出 id（5 帧确认后更新；推流标签与 G 行共用） */
+					static int gesture_out = -1;
+					int n_ext = finger_state[1]+finger_state[2]+finger_state[3]+finger_state[4];
+					int gid = -1;
+					if (n_ext == 0) {
+						gid = 0;
+						/* 点赞：四指全弯且拇指尖(TIP4)明显高于手腕(WRIST0)，归一化 y 差 0.25 */
+						if (kpt[4][1] < kpt[0][1] - 0.25f) gid = 6;
+					} else if (n_ext == 4) {
+						/* 数字4/5 区分：四指全直 + 拇指状态（fa 迟滞已算好）
+						 * 拇指直=finger_state[0]→G5(布/5)；拇指弯→G4(数字4) */
+						gid = finger_state[0] ? 5 : 4;
+					} else if (finger_state[1] && !finger_state[2] && !finger_state[3] && !finger_state[4]) {
+						gid = 1;
+					} else if (finger_state[1] && finger_state[2] && !finger_state[3] && !finger_state[4]) {
+						gid = 2;
+					} else if (finger_state[1] && finger_state[2] && finger_state[3] && !finger_state[4]) {
+						gid = 3;
+					}
+					/* 5 帧稳定确认 → 输出 G 行（机械手 pose 切换） */
+					{
+						static int cand = -1, cand_cnt = 0;
+						if (gid == cand) { if (cand_cnt < 1000) cand_cnt++; }
+						else { cand = gid; cand_cnt = 1; }
+						if (cand_cnt >= 5 && gid >= 0 && gesture_out != gid) {
+							gesture_out = gid;
+							printf("G %d\n", gid);
+							fflush(stdout);
+							fprintf(stderr, "GEST %d\n", gid);
+						}
+					}
+					/* 绘制 21 个手部关键点(原帧归一化坐标×帧尺寸) */
 					for (int q=0;q<21;q++){
-						int px = cx1 + (int)(kpt[q][0]*(cx2-cx1));
-						int py = cy1 + (int)(kpt[q][1]*(cy2-cy1));
+						int px = (int)(kpt[q][0]*fw);
+						int py = (int)(kpt[q][1]*fh);
 						if (px>=0&&px<fw&&py>=0&&py<fh){
 							cv::circle(bgr, cv::Point(px,py), 3,
 							           cv::Scalar(0,255,255), -1); /* 黄色点 */
 						}
 					}
-					char t[64];snprintf(t,sizeof(t),"%s",gname(fid));
-					cv::putText(bgr,t,cv::Point(x1,y1>20?y1-6:y1+16),cv::FONT_HERSHEY_SIMPLEX,0.7,cv::Scalar(255,0,0),2,cv::LINE_AA);
-					if(total%10==0){printf("class[%d] bbox=(%d,%d,%d,%d) label=%d %s kpt0=(%.2f,%.2f)\n",
-					       k,x1,y1,x2,y2,fid,gname(fid),kpt[0][0],kpt[0][1]);fflush(stdout);}
-				}
+					/* 标签显示实际控制用的稳定手势（G 判定 5 帧确认结果） */
+					char t[64];snprintf(t,sizeof(t),"G%d %s", gesture_out, g7name(gesture_out));
+					cv::putText(bgr,t,cv::Point(box[0],box[1]>20?box[1]-6:box[1]+16),cv::FONT_HERSHEY_SIMPLEX,0.7,cv::Scalar(255,0,0),2,cv::LINE_AA);
+					if(total%10==0){printf("pose sc=%.2f cls=%d(%s) bbox=(%d,%d,%d,%d) kpt0=(%.2f,%.2f)\n",
+					       psc,pcl,gname(pcl),box[0],box[1],box[2],box[3],kpt[0][0],kpt[0][1]);fflush(stdout);}
 			}
-		}
-		nh = nm;
 
+		/* 画 ROI 辅助框 (绿框): 手需放入此框内才能被识别 */
+		{
+			int rw = g_roi_side, rh = g_roi_side;
+			if (g_roi_x + rw > fw) rw = fw - g_roi_x;
+			if (g_roi_y + rh > fh) rh = fh - g_roi_y;
+			if (rw > 0 && rh > 0)
+				cv::rectangle(bgr, cv::Rect(g_roi_x, g_roi_y, rw, rh),
+				              cv::Scalar(0, 255, 0), 2);
+		}
 		/* 缩放+软编码 */
 		cv::Mat small;cv::resize(bgr,small,cv::Size(640,360));
 		std::vector<int>pp;pp.push_back(cv::IMWRITE_JPEG_QUALITY);pp.push_back(80);
@@ -461,7 +681,6 @@ int main(int argc, char *argv[])
 
 	g_run=0;
 	pthread_join(hthr,NULL);
-	TDL_DestroyHandle(h);
 err_handle:
 err_vpss:
 	SAMPLE_COMM_VPSS_Stop(VPSS_GRP,NULL);
