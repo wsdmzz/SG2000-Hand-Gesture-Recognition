@@ -1,0 +1,591 @@
+[1;34;47m Run build_uboot() function [0m
+[1;34;47m Run _link_uboot_logo() function [0m
+mkdir -p /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include/imgs.h [0m
+python3 /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/tools/common/image_tool/mkcvipart.py /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/partition/partition_sd.xml /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include
+INFO: generating cvipart.h
+INFO: Done!
+python3 /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/tools/common/image_tool/mk_imgHeader.py /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/partition/partition_sd.xml /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/.config [0m
+echo "u-boot's defconfig is updated. Use it."
+u-boot's defconfig is updated. Use it.
+mkdir -p /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/
+cmp -s /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/u-boot/cvitek_sg2000_milkv_duos_musl_riscv64_sd_defconfig /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/.config || \
+	cp -vb /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/u-boot/cvitek_sg2000_milkv_duos_musl_riscv64_sd_defconfig /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/.config
+'/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/u-boot/cvitek_sg2000_milkv_duos_musl_riscv64_sd_defconfig' -> '/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/.config'
+sed -i "s/CONFIG_BOOTLOGO=y/CONFIG_BOOTLOGO=n/g" /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/.config
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.h [0m
+mkdir -p /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/
+    INFO:mmap_conv: map_file_path is at /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/memmap.py
+    INFO:mmap_conv: Generate to /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.h
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.conf [0m
+    INFO:mmap_conv: map_file_path is at /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/memmap.py
+    INFO:mmap_conv: Generate to /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.conf
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.ld [0m
+    INFO:mmap_conv: map_file_path is at /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/memmap.py
+    INFO:mmap_conv: Generate to /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.ld
+[1;36;40m  [TARGET] /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.txt [0m
+Successfully created an instance of 'MemoryMap' from '/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/memmap.py'.
+[1;36;40m  [TARGET] u-boot-dts [0m
+find /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd  \
+	\( -path "*linux/*.dts*" -o -path "*dts_riscv/*.dts*" \) \
+	-exec cp {} /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/arch/riscv/dts/ \;
+find /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/default/dts/cv181x /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/default/dts/cv181x_riscv -name *.dts* -exec cp {} /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/arch/riscv/dts/ \;
+[1;36;40m  [TARGET] u-boot-build [0m
+ln -snrf /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/output/sg2000_milkv_duos_musl_riscv64_sd/cvi_board_memmap.h /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include/
+rm -f /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/board/cvitek/cvi_board_init.c
+ln -s /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/u-boot/cvi_board_init.c /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/board/cvitek/cvi_board_init.c
+rm -f /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include/cvitek/cvitek.h
+ln -s /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/build/boards/cv181x/sg2000_milkv_duos_musl_riscv64_sd/u-boot/cvitek.h /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include/cvitek/cvitek.h
+make -j20 -C /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10 olddefconfig
+make[1]: 进入目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10”
+make[2]: 进入目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd”
+  HOSTCC  scripts/basic/fixdep
+  GEN     Makefile
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.c
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/scripts/kconfig/Makefile:105: *** No configuration exists for this target on this architecture。 停止。
+scripts/kconfig/conf  --olddefconfig Kconfig
+arch/arm/mach-imx/mx7/Kconfig:22:warning: config symbol defined without type
+arch/arm/mach-socfpga/Kconfig:24:warning: config symbol defined without type
+arch/x86/Kconfig:949:warning: 'X86_OFFSET_SPL': number is invalid
+common/spl/Kconfig:924:warning: config symbol defined without type
+#
+# configuration written to .config
+#
+make[2]: 离开目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd”
+make[1]: 离开目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10”
+make -j20 -C /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10 all
+make[1]: 进入目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10”
+make[2]: 进入目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd”
+  GEN     Makefile
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/scripts/kconfig/Makefile:105: *** No configuration exists for this target on this architecture。 停止。
+scripts/kconfig/conf  --syncconfig Kconfig
+arch/arm/mach-imx/mx7/Kconfig:22:warning: config symbol defined without type
+arch/arm/mach-socfpga/Kconfig:24:warning: config symbol defined without type
+arch/x86/Kconfig:949:warning: 'X86_OFFSET_SPL': number is invalid
+common/spl/Kconfig:924:warning: config symbol defined without type
+  UPD     include/config.h
+  CFG     u-boot.cfg
+  GEN     include/autoconf.mk.dep
+  GEN     include/autoconf.mk
+  GEN     Makefile
+  UPD     include/generated/dt.h
+  UPD     include/generated/timestamp_autogenerated.h
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  LEX     scripts/dtc/dtc-lexer.lex.c
+  YACC    scripts/dtc/dtc-parser.tab.h
+  YACC    scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTLD  scripts/dtc/dtc
+  UPD     include/config/uboot.release
+  Using /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10 as source for U-Boot
+  CFGCHK  u-boot.cfg
+  UPD     include/generated/version_autogenerated.h
+  CC      lib/asm-offsets.s
+  CC      arch/riscv/lib/asm-offsets.s
+  UPD     include/generated/generic-asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  HOSTCC  tools/gen_eth_addr
+  HOSTCC  tools/gen_ethaddr_crc.o
+  WRAP    tools/lib/crc8.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/crc8.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/crc8.c'.
+  HOSTCC  tools/mkenvimage.o
+  HOSTCC  tools/os_support.o
+  WRAP    tools/lib/crc32.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/crc32.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/crc32.c'.
+  HOSTCC  tools/aisimage.o
+  HOSTCC  tools/atmelimage.o
+  HOSTCC  tools/fit_common.o
+  HOSTCC  tools/fit_image.o
+  HOSTCC  tools/image-host.o
+  WRAP    tools/common/image-fit.c
+  WRAP    tools/common/fdt_region.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/image-fit.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/lib/image-fit.c'.
+  WRAP    tools/common/bootm.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/fdt_region.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/lib/fdt_region.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/bootm.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/lib/bootm.c'.
+  HOSTCC  tools/lib/crc32.o
+  HOSTCC  tools/default_image.o
+  WRAP    tools/lib/fdtdec_common.c
+  WRAP    tools/lib/fdtdec.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/fdtdec_common.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/fdtdec_common.c'.
+  WRAP    tools/common/image.c
+  HOSTCC  tools/imagetool.o
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/fdtdec.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/fdtdec.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/image.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/lib/image.c'.
+  HOSTCC  tools/imximage.o
+  HOSTCC  tools/imx8image.o
+包含于文件 /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/default_image.c:20:
+在函数‘image_set_name’中,
+    内联自‘image_set_header’于 /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/default_image.c:134:2:
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/include/image.h:817:9: 警告：‘strncpy’ specified bound 32 equals destination size [-Wstringop-truncation]
+  817 |         strncpy(image_get_name(hdr), name, IH_NMLEN);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  HOSTCC  tools/imx8mimage.o
+  WRAP    tools/lib/md5.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/md5.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/md5.c'.
+  HOSTCC  tools/lpc32xximage.o
+  HOSTCC  tools/mxsimage.o
+  HOSTCC  tools/omapimage.o
+  HOSTCC  tools/pblimage.o
+  HOSTCC  tools/pbl_crc32.o
+  HOSTCC  tools/stm32image.o
+  HOSTCC  tools/vybridimage.o
+  WRAP    tools/lib/rc4.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/rc4.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/rc4.c'.
+  HOSTCC  tools/rkimage.o
+  HOSTCC  tools/rkcommon.o
+  HOSTCC  tools/rksd.o
+  LDS     u-boot.lds
+  HOSTCC  tools/rkspi.o
+  HOSTCC  tools/socfpgaimage.o
+  WRAP    tools/lib/crc16.c
+  HOSTCC  tools/sunxi_egon.o
+  WRAP    tools/lib/hash-checksum.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/crc16.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/crc16.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/hash-checksum.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/hash-checksum.c'.
+  WRAP    tools/lib/sha1.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/sha1.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/sha1.c'.
+  WRAP    tools/lib/sha256.c
+  WRAP    tools/lib/sha512.c
+  WRAP    tools/common/hash.c
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/sha512.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/sha512.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/hash.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/lib/hash.c'.
+  HOSTCC  tools/ublimage.o
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/env/sha256.c'.
+/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/tools/Makefile:256: warning: pattern recipe did not update peer target 'tools/common/sha256.c'.
+  HOSTCC  tools/zynqimage.o
+  HOSTCC  tools/zynqmpimage.o
+  HOSTCC  tools/zynqmpbif.o
+  HOSTCC  tools/libfdt/fdt_ro.o
+  HOSTCC  tools/libfdt/fdt.o
+  HOSTCC  tools/libfdt/fdt_wip.o
+  HOSTCC  tools/libfdt/fdt_sw.o
+  HOSTCC  tools/libfdt/fdt_rw.o
+  HOSTCC  tools/libfdt/fdt_strerror.o
+  HOSTCC  tools/libfdt/fdt_addresses.o
+  HOSTCC  tools/libfdt/fdt_empty_tree.o
+  HOSTCC  tools/libfdt/fdt_overlay.o
+  HOSTCC  tools/gpimage.o
+  HOSTCC  tools/gpimage-common.o
+  HOSTCC  tools/mtk_image.o
+  HOSTCC  tools/dumpimage.o
+  HOSTCC  tools/common/image-fit.o
+  HOSTCC  tools/common/fdt_region.o
+  HOSTCC  tools/common/bootm.o
+  HOSTCC  tools/lib/fdtdec_common.o
+  HOSTCC  tools/lib/fdtdec.o
+  HOSTCC  tools/common/image.o
+  HOSTCC  tools/lib/md5.o
+  HOSTCC  tools/lib/rc4.o
+  HOSTCC  tools/lib/crc16.o
+  HOSTCC  tools/lib/hash-checksum.o
+  HOSTCC  tools/lib/sha1.o
+  HOSTCC  tools/lib/sha256.o
+  HOSTCC  tools/lib/sha512.o
+  LDS     u-boot-elf.lds
+  HOSTCC  tools/common/hash.o
+  HOSTCC  tools/mkimage.o
+  HOSTCC  tools/proftool
+  HOSTCC  tools/prelink-riscv
+  HOSTCC  tools/fdtgrep.o
+  HOSTCC  tools/spl_size_limit
+  HOSTCC  tools/lib/crc8.o
+  HOSTLD  tools/mkenvimage
+  HOSTLD  tools/fdtgrep
+  HOSTLD  tools/gen_ethaddr_crc
+  HOSTLD  tools/dumpimage
+  HOSTLD  tools/mkimage
+  CC      arch/riscv/cpu/cpu.o
+  AS      arch/riscv/cpu/mtrap.o
+  AS      arch/riscv/cpu/start.o
+  CC      arch/riscv/cpu/generic/dram.o
+  CC      arch/riscv/cpu/generic/cpu.o
+  CC      arch/riscv/cpu/generic/cache.o
+  CC      arch/riscv/lib/bootm.o
+  CC      arch/riscv/lib/image.o
+  CC      arch/riscv/lib/boot.o
+  CC      board/cvitek/cv181x/board.o
+  CC      arch/riscv/lib/cache.o
+  CC      arch/riscv/lib/sbi.o
+  CC      arch/riscv/lib/interrupts.o
+  AS      arch/riscv/lib/setjmp.o
+  CC      arch/riscv/lib/reset.o
+  CC      arch/riscv/lib/fdt_fixup.o
+  CC      disk/part.o
+  AR      cmd/riscv/built-in.o
+  CC      common/init/board_init.o
+  CC      cmd/boot.o
+  CC      disk/part_dos.o
+  CC      common/main.o
+  CC      common/exports.o
+  AS      arch/riscv/lib/memset.o
+  AR      drivers/adc/built-in.o
+  AR      arch/riscv/cpu/generic/built-in.o
+  AR      drivers/ata/built-in.o
+  CC      cmd/bootm.o
+  CC      common/cli_hush.o
+  AR      drivers/axi/built-in.o
+  AR      arch/riscv/cpu/built-in.o
+  CC      common/autoboot.o
+  CC      drivers/cvi_usb/utask/cv181x/cvi_usb.o
+  CC      drivers/block/blk-uclass.o
+  CC      cmd/help.o
+  AS      arch/riscv/lib/memmove.o
+  CC      drivers/block/blkcache.o
+  CC      drivers/cvi_usb/utask/cv181x/cps_cvi.o
+  AR      common/init/built-in.o
+  AR      drivers/bus/built-in.o
+  CC      common/board_f.o
+  CC      drivers/cvi_usb/utask/cv181x/cvi_udc_otg.o
+  AS      arch/riscv/lib/memcpy.o
+  CC      cmd/panic.o
+  CC      cmd/version.o
+  AR      drivers/cache/built-in.o
+  CC      common/board_r.o
+  CC      drivers/cvi_usb/utask/cv181x/cvi_udc_otg_xfer_dma.o
+  AR      drivers/dma/ti/built-in.o
+  CC      drivers/gpio/dwapb_gpio.o
+  AR      drivers/dma/built-in.o
+  CC      drivers/gpio/gpio-uclass.o
+  AS      arch/riscv/lib/crt0_riscv_efi.o
+  AR      drivers/net/mscc_eswitch/built-in.o
+  AR      board/cvitek/cv181x/built-in.o
+  CC      drivers/net/phy/phy.o
+  AR      drivers/net/qe/built-in.o
+  CC      drivers/net/designware.o
+  AR      drivers/power/built-in.o
+  AR      drivers/net/ti/built-in.o
+  CC      drivers/core/device.o
+  CC      arch/riscv/lib/reloc_riscv_efi.o
+  AR      arch/riscv/lib/built-in.o
+  CC      drivers/net/phy/cvitek.o
+  CC      drivers/cpu/cpu-uclass.o
+  AR      drivers/power/battery/built-in.o
+  CC      drivers/cpu/riscv_cpu.o
+  CC      drivers/core/fdtaddr.o
+  AR      disk/built-in.o
+  CC      cmd/blk_common.o
+  CC      drivers/crypto/fsl/sec.o
+  AR      drivers/power/domain/built-in.o
+  AR      drivers/crypto/rsa_mod_exp/built-in.o
+  CC      drivers/cvi_usb/utask/cv181x/usb_tty.o
+  CC      common/bootm.o
+  CC      common/bootm_os.o
+  AR      drivers/crypto/fsl/built-in.o
+  CC      drivers/core/lists.o
+  CC      cmd/source.o
+  AR      drivers/crypto/built-in.o
+  AR      drivers/cvi_sound/built-in.o
+  AR      drivers/dfu/built-in.o
+  AR      drivers/cpu/built-in.o
+  AR      drivers/i2c/built-in.o
+  CC      drivers/core/root.o
+  CC      common/fdt_support.o
+  AR      drivers/power/fuel_gauge/built-in.o
+  CC      drivers/input/key_matrix.o
+  AR      drivers/power/mfd/built-in.o
+  AR      drivers/mailbox/built-in.o
+  AR      drivers/power/pmic/built-in.o
+  CC      drivers/core/uclass.o
+  CC      cmd/bdinfo.o
+  CC      drivers/core/util.o
+  CC      common/miiphyutil.o
+  AR      drivers/block/built-in.o
+  CC      drivers/core/device-remove.o
+  CC      cmd/blkcache.o
+  CC      drivers/core/simple-bus.o
+  CC      drivers/core/dump.o
+  CC      drivers/core/of_extra.o
+  CC      common/iomux.o
+  AR      drivers/net/built-in.o
+  CC      cmd/bootefi.o
+  AR      drivers/net/phy/built-in.o
+  AR      drivers/input/built-in.o
+  CC      cmd/booti.o
+  CC      common/splash.o
+  AR      drivers/memory/built-in.o
+  CC      drivers/core/ofnode.o
+  CC      drivers/core/read_extra.o
+  AR      drivers/gpio/built-in.o
+  AR      drivers/power/regulator/built-in.o
+  CC      common/menu.o
+  CC      cmd/cache.o
+  CC      common/cli_readline.o
+  AR      drivers/misc/built-in.o
+  CC      drivers/mmc/mmc.o
+  CC      cmd/cpu.o
+  CC      common/cli_simple.o
+  CC      drivers/serial/serial.o
+  CC      drivers/serial/serial_ns16550.o
+  CC      drivers/mmc/mmc-uclass.o
+  AR      drivers/pwm/built-in.o
+  AR      drivers/mtd/nand/built-in.o
+  CC      cmd/echo.o
+  AR      drivers/mtd/onenand/built-in.o
+  CC      drivers/spi/spi.o
+  AR      drivers/cvi_usb/built-in.o
+  CC      drivers/serial/ns16550.o
+  CC      common/console.o
+  AR      drivers/mtd/spi/built-in.o
+  CC      drivers/mmc/mmc_write.o
+  CC      drivers/mtd/mtdcore.o
+  AR      drivers/reset/built-in.o
+  CC      common/dlmalloc.o
+  CC      cmd/elf.o
+  AR      drivers/usb/cdns3/built-in.o
+  CC      drivers/mtd/mtd_uboot.o
+  AR      drivers/usb/common/built-in.o
+  CC      drivers/mmc/sdhci.o
+  CC      drivers/mmc/cvitek/sdhci-cv181x.o
+  CC      common/malloc_simple.o
+  CC      cmd/exit.o
+  AR      drivers/rtc/built-in.o
+  AR      drivers/usb/dwc3/built-in.o
+  AR      drivers/spi/built-in.o
+  CC      cmd/ext4.o
+  CC      common/image.o
+  AR      drivers/scsi/built-in.o
+  AR      drivers/usb/emul/built-in.o
+  CC      common/hash.o
+  CC      cmd/ext2.o
+  AR      drivers/serial/built-in.o
+  CC      cmd/fat.o
+  AR      drivers/smem/built-in.o
+  CC      common/image-fdt.o
+  CC      common/image-fit.o
+  CC      common/memsize.o
+  AR      drivers/soc/built-in.o
+  AR      drivers/usb/eth/built-in.o
+  CC      common/stdio.o
+  AR      drivers/sound/built-in.o
+  AR      drivers/spmi/built-in.o
+  AR      drivers/usb/host/built-in.o
+  AR      drivers/thermal/built-in.o
+  CC      drivers/timer/timer-uclass.o
+  CC      common/cli.o
+  CC      cmd/fdt.o
+  AR      drivers/ufs/built-in.o
+  AR      drivers/usb/mtu3/built-in.o
+  CC      cmd/flash.o
+  CC      drivers/timer/riscv_timer.o
+  CC      common/command.o
+  CC      cmd/cvi_vo.o
+  CC      common/s_record.o
+  AR      drivers/core/built-in.o
+  CC      common/xyzModem.o
+  AR      drivers/usb/musb/built-in.o
+  AR      drivers/usb/phy/built-in.o
+  AR      drivers/video/bridge/built-in.o
+  CC      drivers/video/cvitek/cvi_disp.o
+  AR      drivers/usb/ulpi/built-in.o
+  CC      cmd/cvi_update.o
+  CC      cmd/cvi_utask.o
+  AR      drivers/video/sunxi/built-in.o
+  CC      env/common.o
+  AR      drivers/watchdog/built-in.o
+  AR      drivers/timer/built-in.o
+  CC      env/env.o
+  CC      drivers/video/cvitek/cvi_mipi.o
+  AR      drivers/mtd/mtd.o
+  CC      fs/ext4/ext4fs.o
+  AR      lib/crypto/built-in.o
+  AR      drivers/mtd/built-in.o
+  CC      lib/efi_driver/efi_uclass.o
+  AR      drivers/video/ti/built-in.o
+  CC      drivers/video/backlight-uclass.o
+  CC      env/attr.o
+  CC      net/arp.o
+  CC      drivers/video/cvitek/scaler.o
+  CC      drivers/video/cvitek/reg.o
+  CC      env/flags.o
+  CC      drivers/video/console_normal.o
+  AR      drivers/usb/musb-new/built-in.o
+  CC      fs/ext4/ext4_common.o
+  CC      lib/efi_loader/efi_freestanding.o
+  CC      env/callback.o
+  CC      drivers/video/video-uclass.o
+  CC      lib/libfdt/fdt.o
+  CC      lib/libfdt/fdt_ro.o
+  CC      lib/efi_loader/efi_bootmgr.o
+  CC      net/bootp.o
+  CC      net/eth-uclass.o
+  CC      fs/fat/fat_write.o
+  CC      lib/lzma/LzmaDec.o
+  CC      lib/lzma/LzmaTools.o
+  CC      drivers/video/vidconsole-uclass.o
+  CC      env/nowhere.o
+  CC      lib/libfdt/fdt_wip.o
+  CC      lib/efi_driver/efi_block_device.o
+  CC      cmd/fs.o
+  CC      lib/libfdt/fdt_strerror.o
+  CC      fs/ext4/dev.o
+  CC      drivers/video/cvitek/vip_sys.o
+  AR      drivers/mmc/built-in.o
+  CC      lib/efi_loader/efi_boottime.o
+  CC      fs/fs.o
+  AR      env/built-in.o
+  CC      drivers/video/video_bmp.o
+  CC      drivers/video/panel-uclass.o
+  AR      common/built-in.o
+  CC      lib/efi_loader/efi_helper.o
+  CC      lib/efi_loader/efi_console.o
+  CC      cmd/gpio.o
+  CC      drivers/video/simple_panel.o
+  CC      lib/efi_loader/efi_device_path.o
+  CC      net/eth_common.o
+  AR      lib/efi_driver/built-in.o
+  CC      drivers/video/cvitek/dsi_phy.o
+  CC      lib/libfdt/fdt_sw.o
+  CC      fs/fs_internal.o
+  AR      fs/ext4/built-in.o
+  CC      cmd/load.o
+  CC      cmd/mem.o
+  CC      lib/zlib/zlib.o
+  CC      drivers/video/cvitek/cvi_i80.o
+  CC      lib/libfdt/fdt_rw.o
+  CC      cmd/mii.o
+  CC      lib/efi_loader/efi_device_path_to_text.o
+  CC      lib/charset.o
+  CC      net/net.o
+  CC      lib/crc8.o
+  CC      drivers/video/cvitek/cvi_i80_hw.o
+  CC      cmd/mdio.o
+  CC      lib/crc16.o
+  CC      lib/efi_loader/efi_device_path_utilities.o
+  CC      lib/efi_loader/efi_dt_fixup.o
+  CC      net/nfs.o
+  CC      lib/efi_loader/efi_file.o
+  CC      lib/fdtdec_common.o
+  CC      net/ping.o
+  CC      lib/efi_loader/efi_hii.o
+  CC      lib/smbios.o
+  CC      lib/libfdt/fdt_empty_tree.o
+  CC      lib/efi_loader/efi_image_loader.o
+  CC      net/tftp.o
+  AR      lib/lzma/built-in.o
+  CC      cmd/sleep.o
+  CC      lib/ldiv.o
+  CC      lib/efi_loader/efi_load_options.o
+  CC      lib/efi_loader/efi_memory.o
+  CC      lib/libfdt/fdt_addresses.o
+  AR      drivers/video/cvitek/built-in.o
+  CC      cmd/mmc.o
+  AR      drivers/video/built-in.o
+  CC      lib/efi_loader/efi_root_node.o
+  AR      drivers/built-in.o
+  CC      cmd/net.o
+  CC      cmd/part.o
+  CC      cmd/pxe.o
+  CC      lib/efi_loader/efi_runtime.o
+  CC      lib/net_utils.o
+  CC      lib/efi_loader/efi_setup.o
+  AR      lib/libfdt/built-in.o
+  CC      lib/efi_loader/efi_string.o
+  CC      lib/efi_loader/efi_unicode_collation.o
+  CC      lib/efi_loader/efi_var_common.o
+  CC      cmd/pxe_utils.o
+  CC      cmd/setexpr.o
+  CC      lib/efi_loader/efi_var_mem.o
+  CC      lib/rc4.o
+  CC      lib/list_sort.o
+  CC      lib/md5.o
+  CC      cmd/sysboot.o
+  AR      net/built-in.o
+  CC      lib/efi_loader/efi_var_file.o
+  CC      lib/efi_loader/efi_variable.o
+  CC      lib/hash-checksum.o
+  CC      cmd/test.o
+  CC      lib/sha1.o
+  CC      lib/sha256.o
+  CC      cmd/efuse.o
+  CC      lib/gunzip.o
+  CC      cmd/nvedit.o
+  CC      lib/lz4_wrapper.o
+  CC      lib/fdtdec.o
+  CC      lib/qsort.o
+  AR      fs/fat/built-in.o
+  CC      lib/hashtable.o
+  CC      lib/errno.o
+  AR      fs/built-in.o
+  CC      lib/efi_loader/efi_watchdog.o
+  CC      lib/display_options.o
+  CC      lib/crc32.o
+  CC      lib/efi_loader/efi_gop.o
+  CC      lib/ctype.o
+  CC      lib/efi_loader/efi_disk.o
+  CC      lib/efi_loader/efi_net.o
+  CC      lib/div64.o
+  CC      lib/hang.o
+  CC      lib/efi_loader/efi_smbios.o
+  CC      lib/linux_compat.o
+  CC      lib/efi_loader/efi_load_initrd.o
+  CC      lib/linux_string.o
+  CC      lib/efi_loader/helloworld.o
+  CC      lib/lmb.o
+  AS      lib/efi_loader/efi_crt0.o
+  CC      lib/membuff.o
+  AR      lib/zlib/built-in.o
+  CC      lib/efi_loader/efi_reloc.o
+  CC      lib/slre.o
+  CC      lib/string.o
+  CC      lib/tables_csum.o
+  CC      lib/time.o
+  CC      lib/hexdump.o
+  CC      lib/uuid.o
+  CC      lib/rand.o
+  AR      cmd/built-in.o
+  CC      lib/panic.o
+  CC      lib/vsprintf.o
+  CC      lib/strto.o
+  CC      lib/date.o
+  CC      lib/rtc-lib.o
+  LD      lib/efi_loader/helloworld_efi.so
+  CC      lib/elf.o
+  OBJCOPY lib/efi_loader/helloworld.efi
+  AR      lib/efi_loader/built-in.o
+  AR      lib/built-in.o
+  LD      u-boot
+  OBJCOPY u-boot.srec
+  OBJCOPY u-boot-nodtb.bin
+  SYM     u-boot.sym
+  DTC     arch/riscv/dts/sg2000_milkv_duos_musl_riscv64_sd.dtb
+Error: arch/riscv/dts/.sg2000_milkv_duos_musl_riscv64_sd.dtb.pre.tmp:84.1-10 Label or path wifi_pin not found
+FATAL ERROR: Syntax error parsing input tree
+Check /home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd/arch/riscv/dts/.sg2000_milkv_duos_musl_riscv64_sd.dtb.pre.tmp for errors
+make[4]: *** [scripts/Makefile.lib:333：arch/riscv/dts/sg2000_milkv_duos_musl_riscv64_sd.dtb] 错误 1
+make[3]: *** [/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/dts/Makefile:45：arch-dtbs] 错误 2
+make[2]: *** [/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/Makefile:1155：dts/dt.dtb] 错误 2
+make[2]: 离开目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10/build/sg2000_milkv_duos_musl_riscv64_sd”
+make[1]: *** [Makefile:178：sub-make] 错误 2
+make[1]: 离开目录“/home/oooa/Milk-V-Duo/b_plan/01_sdk/sophpi/u-boot-2021.10”
+make: *** [Makefile:204：u-boot-build] 错误 2
+BUILD_ALL_EXIT=2

@@ -1,0 +1,40 @@
+fw_printenv dl_flag; echo ENV_RC=$?
+dl_flag=done
+ENV_RC=0
+[root@sg200x]~# cat /etc/fw_env.config 2>/dev/null; echo CFG_RC=$?
+/dev/mmcblk0 0xa00000 0x20000
+CFG_RC=0
+[root@sg200x]~# umount /mnt/data; umount /mnt/cfg; echo UMOUNT_DONE
+UMOUNT_DONE
+[root@sg200x]~# e2fsck -fy /dev/mmcblk0p6; resize2fs -f /dev/mmcblk0p6; echo RS6
+_RC=$?
+e2fsck 1.46.2 (28-Feb-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+CFG: 15/960 files (0.0% non-contiguous), 2489/2491 blocks
+resize2fs 1.46.2 (28-Feb-2021)
+Resizing the filesystem on /dev/mmcblk0p6 to 3810 (4k) blocks.
+The filesystem on /dev/mmcblk0p6 is now 3810 (4k) blocks long.
+
+RS6_RC=0
+[root@sg200x]~# e2fsck -fy /dev/mmcblk0p7; resize2fs -f /dev/mmcblk0p7; echo RS7
+_RC=
+e2fsck 1.46.2 (28-Feb-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+DATA: 14/4608 files (0.0% non-contiguous), 1329/1339 blocks
+resize2fs 1.46.2 (28-Feb-2021)
+Resizing the filesystem on /dev/mmcblk0p7 to 1695454 (4k) blocks.
+The filesystem on /dev/mmcblk0p7 is now 1695454 (4k) blocks long.
+
+RS7_RC=
+[root@sg200x]~# mount -t ext4 -o sync /dev/mmcblk0p6 /mnt/cfg; mount -t ext4 -o 
+sync /dev/mmcblk0p7 /mnt/data; echo REMOUNT_DONE
+REMOUNT_DONE
+[root@sg200x]~# 

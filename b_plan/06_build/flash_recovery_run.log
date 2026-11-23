@@ -1,0 +1,8 @@
+serial capture pid=2758737 -> serial_recovery_flash.log
+attempt 1: USB_DL_EXIT=255
+attempt 2: USB_DL_EXIT=255
+attempt 3: USB_DL_EXIT=255
+attempt 4: USB_DL_EXIT=255
+attempt 5: USB_DL_EXIT=255
+attempt 6: USB_DL_EXIT=0
+DONE. 检查 usb_dl_recovery.log 的 USB_DL_EXIT 与 serial_recovery_flash.log 的首启输出

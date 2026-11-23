@@ -1,0 +1,73 @@
+#!/bin/sh
+#
+# S99usbnet — Module 01 (SG2000) USB RNDIS 网络 + dropbear SSH 开机自启
+# 2026-11-20 为 sophpi 新固件编写（内核 gadget 全 =y，无需 insmod）。
+# 主机侧静态 192.168.42.99/24，板端 192.168.42.1，无需 DHCP。
+#
+# Module 01 载板 USB 路由：GPIO453=usb_en、GPIO510=usb_select，
+# 两者置 0 把 USB 口切到 SG2000 device 侧（沿用旧固件 usb-rndis.sh 实测值）。
+
+case "$1" in
+  start|"")
+    echo "S99usbnet: start"
+
+    # 1) USB mux 路由到 device 侧
+    for g in 453 510; do
+      if [ ! -d /sys/class/gpio/gpio$g ]; then
+        echo $g > /sys/class/gpio/export 2>/dev/null
+      fi
+      echo out > /sys/class/gpio/gpio$g/direction 2>/dev/null
+      echo 0 > /sys/class/gpio/gpio$g/value 2>/dev/null
+    done
+    sleep 1
+
+    # 2) OTG 角色切 device
+    if [ -w /proc/cviusb/otg_role ]; then
+      echo device > /proc/cviusb/otg_role 2>/dev/null
+    fi
+
+    # 3) configfs RNDIS gadget（VID/PID 沿用旧固件 Cvitek RNDIS，主机侧免驱）
+    mount | grep -q configfs || mount -t configfs none /sys/kernel/config 2>/dev/null
+    G=/sys/kernel/config/usb_gadget/cvitek
+    if [ ! -d "$G" ]; then
+      mkdir -p "$G"
+      echo 0x3346 > "$G/idVendor"
+      echo 0x1009 > "$G/idProduct"
+      echo 0x0100 > "$G/bcdDevice"
+      echo 0x0200 > "$G/bcdUSB"
+      mkdir -p "$G/strings/0x409"
+      echo "Cvitek" > "$G/strings/0x409/manufacturer"
+      echo "RNDIS"  > "$G/strings/0x409/product"
+      echo "0123456789" > "$G/strings/0x409/serialnumber"
+      mkdir -p "$G/configs/c.1/strings/0x409"
+      echo "RNDIS" > "$G/configs/c.1/strings/0x409/configuration"
+      echo 100 > "$G/configs/c.1/MaxPower"
+      mkdir -p "$G/functions/rndis.usb0"
+      ln -s "$G/functions/rndis.usb0" "$G/configs/c.1/"
+      UDC=`ls /sys/class/udc/ | head -1`
+      echo "$UDC" > "$G/UDC"
+      echo "  RNDIS gadget bound to $UDC"
+    fi
+
+    # 4) usb0 静态 IP
+    sleep 1
+    ifconfig usb0 192.168.42.1 netmask 255.255.255.0 up 2>/dev/null
+
+    # 5) dropbear SSH（-R 首次自动生成主机密钥）
+    if ! pidof dropbear >/dev/null 2>&1; then
+      mkdir -p /etc/dropbear
+      /usr/sbin/dropbear -R 2>>/tmp/dropbear.log
+    fi
+    echo "S99usbnet: done"
+    ;;
+  stop)
+    ;;
+  restart)
+    "$0" start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac
+exit 0

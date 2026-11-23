@@ -1,0 +1,25 @@
+mount /dev/mmcblk0p6 /mnt/cfg
+[  282.773582] /dev/mmcblk0p6: Can't open blockdev
+mount: mounting /dev/mmcblk0p6 on /mnt/cfg failed: Resource busy
+[root@sg200x]~# mount /dev/mmcblk0p7 /mnt/data
+[  283.749548] /dev/mmcblk0p7: Can't open blockdev
+mount: mounting /dev/mmcblk0p7 on /mnt/data failed: Resource busy
+[root@sg200x]~# resize2fs -f /dev/mmcblk0p4
+resize2fs 1.46.2 (28-Feb-2021)
+Filesystem at /dev/mmcblk0p4 is mounted on /; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 4
+The filesystem on /dev/mmcblk0p4 is now 786560 (1k) blocks long.
+
+[root@sg200x]~# df -h
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root               739.8M     74.7M    628.4M  11% /
+devtmpfs                157.7M         0    157.7M   0% /dev
+tmpfs                   157.8M         0    157.8M   0% /dev/shm
+tmpfs                   157.8M     40.0K    157.7M   0% /tmp
+tmpfs                   157.8M     16.0K    157.8M   0% /run
+/dev/mmcblk0p6           10.6M      5.5M      4.9M  53% /mnt/cfg
+/dev/mmcblk0p7            6.4G    276.0K      6.4G   0% /mnt/data
+[root@sg200x]~# touch /mnt/data/.wtest && rm /mnt/data/.wtest
+[root@sg200x]~# ls /mnt/data
+[1;34mlost+found[m      [0;0msample[m          [0;0msensor_cfg.ini[m  [0;0msite_info.txt[m
+[root@sg200x]~# 

@@ -1,0 +1,5 @@
+
+[root@sg200x]~# killall ps
+kill $(pidof vo_probe)
+mv /root/vo_probe.new /root/vo_probe
+ls /root

@@ -28,6 +28,9 @@
 | #92-115 | 换自训 **YOLOv8-pose** 模型；发现官方模型对「半握+遮挡」系统性失效（G1~G4 命中 0%） | ✅ |
 | **#116-127** | **自训 pose 模型全链路打通**：量化 bug、ROI 裁剪、旋转对齐、640→480 转换、自适应 ROI | ✅ |
 | **#128** | **定位挂墙多人场景失配**（远距离/任意位置失效）→ 需面向实际场景重训 | ⚠️ |
+| **#129-143** | **本机全闭环**：自编译 eMMC 固件（duos emmc 板级 + 6.5GB DATA 自动扩容）烧录成功、collector 采集器重建（VENC 根因修复） | ✅ |
+| **#144** | **8HD 屏花屏根因实锤并修复**：内核 mipi_tx 缺 u-boot `_cal_htt_extra` DSI 行周期补偿 ⇒ hfp 40→174/pixel_clk 80412 | ✅ |
+| **#145** | **摄像头 30fps 预览 + 完整 UI 上屏流畅**：非缓存内存读写瓶颈（150ms→31ms/帧） | ✅ |
 
 ---
 
@@ -59,7 +62,12 @@
 ├── deploy/                    # 可部署产物
 │   ├── models/               # cvimodel 模型（含自训 best_rot_480_int8_cv181x）
 │   └── configs/              # model_factory.json 等
-├── timeline/                  # 验证日志（#0-#128 完整）
+├── b_plan/                    # 本机 eMMC 固件路线（#129-#145，当前主线）
+│   ├── 01_sdk_overlay/       #   自制固件全部 SDK 改动（8HD panel/eMMC 板级/automount；用法见其 README）
+│   ├── 05_app/collector/     #   挂墙采集器源码（屏上 UI + 30fps 预览 + JPEG 落盘）
+│   ├── 06_build/             #   构建/烧录/串口自动化脚本与全部构建日志
+│   └── 07_deploy/            #   rootfs 修补脚本 + 大型产物 MANIFEST
+├── timeline/                  # 验证日志（#0-#145 完整）
 └── assets/                    # 截图/示意图
 ```
 

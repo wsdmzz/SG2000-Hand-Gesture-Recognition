@@ -1,0 +1,467 @@
+
+[root@sg200x]~# reboot
+[root@sg200x]~#  Stopping network: OK
+Saving random seed: OK
+Stopping klogd: OK
+Stopping syslogd: OK
+umount: devtmpfs busy - remounted read-only
+The system is going down NOW!
+Sent SIGTERM to all processes
+       Sent SIGKILL to all processes       [  152.539663] reboot: Restarting system
+ÃùÓÈõ‚²W¤I…¡LùUª¥®ÕŠ,Â0Y•	Ìù¢ª)•M£ùE­R	Ê0‚Â/L&‚Â°Âž*ùP¥ùÂŠùBQùŠùt%1 ™i˜&âçCA“,Ú6¦’°¦S	ª&Be”'Sò4æ	Ââ°jŠ³×uù¿®Vío¾O’a0&ˆóçõ™¦¥Õa³Ëõ8‚¥Â°FH•J]0EÂ/Â’i0òáP’QéŠŒ7Â±ADTJ¹ÕtžC!é_°X®Õ[ju°a.C!­çÅå°Y¯*
+¤¦¥zeŠ”Im-ó5‚T
+¤XWAr±—õ±ò–ÉŠÄD%ÓB…³ªÈPÊÍ®#ñ°ÊYáI“	ÂÉ–‚º0e¦YÂ0¦‚ÂÅ3&‚®#Q¤*êšÚµÂ‚Â¯&‚°Â0ùRÊ9(š*‘Ž'*[¡j¹“­	²“¸SÒ9™êÁÐºrYâÍay.ÒÁ0Yj°:ò}©Òñ1š‘¯²aeCÉ¡EÕ‚Û†Yº²¦Fj¶"ÕjÕÕl"…ô9Gå ‚’’Ú ‚¤Zk:LSªÊº#Ê€C!E‚»&)ú7™²j¡o³Êõs·µ :+Ñ€ÖËÅŠ*‚[¦IÂÂ¹ŽfEÕí½p²Z½e¾X,+A&ëAwZË®‹A°.Ëáá1©
+¬¦	âmb‚²áL’	âa1“Ma³“º0¸,™åÌ¢•âq0&‚°Â/ÂM¤Â/Í¤ÂŠ¨ê¡/LÙŠó¾Î5Ý©×Ñ_±Ë}ôë…ñ¬É²!TA¯âaA&Â°úÅ°Â‚º°a‘NÂ°NúÍä‚,©
+¤(uÂ¤xŠ£º0ÙŠê…Áe²•r‘Al+‘¥–©
+Ó'K¨R¡C[K•AtÂÑák’»C!*Õp×ªÝn¹×a‚¸Â°‚‚²Á
+U¹“¨J‚¾YÑß†Éâq0&‚°&‚a²ú°a0‚°ÂŽ#Á
+•®*X
+²A®®H ú}ß‚€ß‚ ‚‚ ‚ õ½_¯ú}½_zýŸõz
+z½  ‚ ‚€‚ ‚¯z½_¯ b½ úñâA¼òA|zý ‚_õŸz½ Aˆõ½ A¼U‚|A¼C!òA|‚¼â'b¯zA\zÒrA\õý€åA â A|C!âüõñ¼U‚|ú}] A¼ò}½_•¼â½)ñ ½!œõ½_É®õ] ¼õ}ñ_¼å½_õõ½üõ½¿éõ½_Å5Š‚ ‚€‚‚üâ5Š‚ ‚¼Å
+áP+Ñ¦µANØK ‚ ‚‚ Ò ­Z« µV"Õ¯*ˆÕÐ+*Ñ¦µAFÙÑµ®ÖA  ‚ j™¤)+ÝŠ+e…ôÖKõ€
+IÔÝµK ‚ ‚šŠ:ŠEÅ´ÖµAI•„)WkÕ‚ ‚:€,«¹á,!Å…´ÖKõUëÅr"•¶ª¬‚ Ò‚ã+ù´C!eÅtæ+µ ¨Ëí¿KÄ9';• ‚:ª…²Ò5C!EÅt¶+µ jÕ¤)WkÕ‚ ‚šjº­Å…´ÖKÕ £^.íe´"•öšLºª-Ë¨°+ÑÉonšÕípYK„9Wk•€‚:šÙ©«^×Á¥K5
+$Kµ·(®Å³Y‚ ‚€‚ ‚'‚âá0Â‚°#‘TKõ·X®ZåºY‚ ‚ ‚ ‚šŠ´‚Kh¨²-Åmµš	• µÉ³ªËA €‚ ‚‚Ž¦ÈáÄ«Å©‚Î˜[ ‚ ‚‚ ‚š’½ïWH¤Ë…é‚¢ëÑ *©¤‚ ‚ Ò‚°#ôÛ…©‚H¡*U ‚€‚ ‚Ò‚°EHH½E­¸ËA*ÖÕo‚ ‚ ‚‚ºÂx‚Â°‚“Â°Âj°a0‚‚Â·‚¦–™A(ÒÙŠÔ«Åi’¹VëëA±‚ ‚‚‚ ‚¸‚Â°Â0‚Â°ÂjÂøÂ‚°Â8‚“–™É ™jŠÔ«Åi¾’©Vëù&‚ ‚ ‚€'ÂøÂ0‚Â°Â0‚Â°Â™¦–ÉfÖ™¦–ÉfÖ¨*iEBe!Ô«Åi¾2•ñt
+‘¤®Öí ‚ ‚¸‚Â°ÂÂÂ²Â0’jŠÔ«Å©‚NÑ€P®V‚ ‚ Ò€âa0‚Â°Â0˜‚Â°#ôË…©‚NµÑ N³‹Õ€‚ ‚Ò‚Ó‹û‘¥#ä«¥®‚SÞ®%Íå‚‚ ‚'êÅsC!Ôë…ÕnšåóJgÁ¥KA ‚€‚ºÊÕ³C¡HÂëÑ
+IÔ
+‘‚ ‚‚ ‚:jŠ:ØëÑ
+IÔ"ý­X*‚ ‚ ‚š’½ïWH(½¯H…¢*M… €‚ ‚‚:’Ù–S«Åf¤,WåxC¡å½ïB…²Õa´]®ÖA  ‚:š¯=‹Õ²YËªÍoµK•ò‹I¥­©ÈB¿KÈ*‚5ÐýµK ‚ €Ò‚1³¨¢ëá É”B•PT…î+É©WA:¢.SHB¿KÈ0
+‚5
+Ñ´.VÍABVZWéB *Š¨ëÑAH¡**‘P­½õ‹A‚ Â!ÝoB…’* S
+½ån ‚ 'Â!ØëÑ€*I¡ ÓJÌ‘‚€‚ ‚' ‚âa0‚Â°Â0’Â²ý¯"…R¤jÄª€‚ ‚â ÂAÂ°Â‚°’e0™Cá
+
+U-Boot 2021.10 (May 30 2025 - 14:51:18 +0800)soph
+
+DRAM:  510 MiB
+gd->relocaddr=0x94bac000. offset=0x149ac000
+set_rtc_register_for_power
+MMC:   cv-emmc@4300000: 0, cv-sd@4310000: 1, wifi-sd@4320000: 2
+Loading Environment from MMC... mmc0 : finished tuning, code:30
+OK
+In:    serial
+Out:   serial
+Err:   serial
+Net:   
+Warning: ethernet@4070000 (eth0) using random MAC address - de:51:e1:b2:56:5b
+eth0: ethernet@4070000
+Hit any key to stop autoboot:  1  0
+soph#    setenv mtdparts 'blkdevparts=mmcblk0:8192K(BOOT),2048K(MISC),128K(ENV),786560K(ROOTFS),40960K(SYSTEM),15240K(CFG),4387576K(DATA);mmcblk0boot0:1M(fip),1M(fip_bak)'
+soph# printenv mtdparts
+mtdparts=blkdevparts=mmcblk0:8192K(BOOT),2048K(MISC),128K(ENV),786560K(ROOTFS),40960K(SYSTEM),15240K(CFG),4387576K(DATA);mmcblk0boot0:1M(fip),1M(fip_bak)
+soph# saveenv
+Saving Environment to MMC... Writing to MMC(0)... OK
+soph# boot
+## Error: "norboot" not defined
+## Error: "nandboot" not defined
+mmc0 : finished tuning, code:30
+switch to partitions #0, OK
+mmc0(part 0) is current device
+
+MMC read: dev # 0, block # 0, count 16384 ... 16384 blocks read: OK in 94 ms (85.1 MiB/s)
+## Loading kernel from FIT Image at 81800000 ...
+   Using 'config-sg2000_milkv_duos_musl_riscv64_emmc' configuration
+   Trying 'kernel-1' kernel subimage
+     Description:  cvitek kernel
+     Type:         Kernel Image
+     Compression:  lzma compressed
+     Data Start:   0x818000d8
+     Data Size:    3458397 Bytes = 3.3 MiB
+     Architecture: RISC-V
+     OS:           Linux
+     Load Address: 0x80200000
+     Entry Point:  0x80200000
+     Hash algo:    crc32
+     Hash value:   98fc1bec
+   Verifying Hash Integrity ... crc32+ OK
+## Loading fdt from FIT Image at 81800000 ...
+   Using 'config-sg2000_milkv_duos_musl_riscv64_emmc' configuration
+   Trying 'fdt-sg2000_milkv_duos_musl_riscv64_emmc' fdt subimage
+     Description:  cvitek device tree - sg2000_milkv_duos_musl_riscv64_emmc
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x81b4c768
+     Data Size:    20942 Bytes = 20.5 KiB
+     Architecture: RISC-V
+     Hash algo:    sha256
+     Hash value:   a0f7b8e42e2e2821f7c87d68730a5dd32e32d05d08699b52a527332c49f92647
+   Verifying Hash Integrity ... sha256+ OK
+   Booting using the fdt blob at 0x81b4c768
+   Uncompressing Kernel Image
+   Decompressing 7887872 bytes used 1257ms
+   Loading Device Tree to 000000009425b000, end 00000000942631cd ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.10.4-tag--00022-g767d3c5ab10b-dirty (oooa@fedora) (riscv64-unknown-linux-musl-gcc (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 10.2.0, GNU ld (GNU Binutils) 2.35) #5 PREEMPT Fri Nov 20 13:27:16 HKT 2026
+[    0.000000] earlycon: sbi0 at I/O port 0x0 (options '')
+[    0.000000] printk: bootconsole [sbi0] enabled
+[    0.000000] efi: UEFI not found.
+[    0.000000] Ion: Ion memory setup at 0x0000000095400000 size 170 MiB
+[    0.000000] OF: reserved mem: initialized node ion, compatible id ion-region
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000080000000-0x000000009fdfffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x0000000094c2ffff]
+[    0.000000]   node   0: [mem 0x0000000095400000-0x000000009fdfffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000009fdfffff]
+[    0.000000] On node 0 totalpages: 128560
+[    0.000000]   DMA32 zone: 1785 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 128560 pages, LIFO batch:31
+[    0.000000] SBI specification v0.3 detected
+[    0.000000] SBI implementation ID=0x1 Version=0x9
+[    0.000000] SBI v0.2 TIME extension detected
+[    0.000000] SBI v0.2 IPI extension detected
+[    0.000000] SBI v0.2 RFENCE extension detected
+[    0.000000] riscv: ISA extensions acdfimsuv
+[    0.000000] riscv: ELF capabilities acdfimv
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 126775
+[    0.000000] Kernel command line: root=/dev/mmcblk0p4 rootwait rw blkdevparts=mmcblk0:8192K(BOOT),2048K(MISC),128K(ENV),786560K(ROOTFS),40960K(SYSTEM),15240K(CFG),4387576K(DATA);mmcblk0boot0:1M(fip),1M(fip_bak) console=ttyS0,115200 earlycon=sbi riscv.fwsz=0x80000 loglevel=9
+[    0.000000] Dentry cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.000000] Sorting __ex_table...
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 322976K/514240K available (4730K kernel code, 590K rwdata, 2170K rodata, 148K init, 228K bss, 191264K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] riscv-intc: 64 local interrupts mapped
+[    0.000000] plic: interrupt-controller@70000000: mapped 101 interrupts with 1 handlers for 2 contexts.
+[    0.000000] random: get_random_bytes called from start_kernel+0x272/0x346 with crng_init=0
+[    0.000000] riscv_timer_init_dt: Registering clocksource cpuid [0] hartid [0]
+[    0.000000] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x5c40939b5, max_idle_ns: 440795202646 ns
+[    0.000009] sched_clock: 64 bits at 25MHz, resolution 40ns, wraps every 4398046511100ns
+[    0.008414] Calibrating delay loop (skipped), value calculated using timer frequency.. 50.00 BogoMIPS (lpj=100000)
+[    0.019124] pid_max: default: 4096 minimum: 301
+[    0.024024] Mount-cache hash table entries: 1024 (order: 1, 8192 bytes, linear)
+[    0.031537] Mountpoint-cache hash table entries: 1024 (order: 1, 8192 bytes, linear)
+[    0.041234] ASID allocator initialised with 65536 entries
+[    0.046939] rcu: Hierarchical SRCU implementation.
+[    0.052506] EFI services will not be available.
+[    0.057669] devtmpfs: initialized
+[    0.067959] early_time_log: do_initcalls: 8853214us
+[    0.073732] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.083771] futex hash table entries: 16 (order: -4, 384 bytes, linear)
+[    0.090745] pinctrl core: initialized pinctrl subsystem
+[    0.096622] NET: Registered protocol family 16
+[    0.101783] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.109171] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.117952] thermal_sys: Registered thermal governor 'step_wise'
+[    0.134783] OF: /gpio@03020000/gpio-controller@0: could not find phandle
+[    0.148000] OF: /gpio@03021000/gpio-controller@1: could not find phandle
+[    0.154992] OF: /gpio@03022000/gpio-controller@2: could not find phandle
+[    0.161979] OF: /gpio@03023000/gpio-controller@3: could not find phandle
+[    0.168969] OF: /gpio@05021000/gpio-controller@4: could not find phandle
+[    0.178008] clk reset: nr_reset=64 resource_size=8
+[    0.183554] get audio clk=22579200
+[    0.187040] cvitek-i2s-subsys 4108000.i2s_subsys: cv1835_set_mclk,71:set clk_name:clk_sdma_aud0, clk:22579200
+[    0.429029] cvitek-i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 22579200
+[    0.436745] cvitek-i2s-subsys 4108000.i2s_subsys: cv1835_set_mclk,71:set clk_name:clk_sdma_aud1, clk:22579200
+[    0.447031] cvitek-i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 22579200
+[    0.454826] cvitek-i2s-subsys 4108000.i2s_subsys: cv1835_set_mclk,71:set clk_name:clk_sdma_aud2, clk:22579200
+[    0.465130] cvitek-i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 22579200
+[    0.472925] cvitek-i2s-subsys 4108000.i2s_subsys: cv1835_set_mclk,71:set clk_name:clk_sdma_aud3, clk:22579200
+[    0.483231] cvitek-i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 22579200
+[    0.508655] dw_dmac 4330000.dma: CVITEK DMA Controller, 8 channels, probe done!
+[    0.517185] SCSI subsystem initialized
+[    0.521433] usbcore: registered new interface driver usbfs
+[    0.527222] usbcore: registered new interface driver hub
+[    0.532765] usbcore: registered new device driver usb
+[    0.540748] mc: Linux media interface: v0.10
+[    0.545196] videodev: Linux video capture interface: v2.00
+[    0.551365] Ion: ion_parse_dt_heap_common: id 0 type 2 name carveout align 1000
+[    0.559421] Ion: rmem_ion_device_init: heap carveout base 0x0000000095400000 size 0x000000000aa00000 dev (____ptrval____)
+[    0.570723] ion_carveout_heap_create, size=0xaa00000
+[    0.576023] cvi_get_rtos_ion_size, rtos ion_size get:0x1600000
+[    0.581998] ion_carveout_heap_create, size(exclusion of rtos_ion_size)=0x9400000
+[    0.589852] platform carveout: [ion] add heap id 0, type 2, base 0x95400000, size 0xaa00000
+[    0.598809] Advanced Linux Sound Architecture Driver Initialized.
+[    0.605927] Bluetooth: Core ver 2.22
+[    0.609661] NET: Registered protocol family 31
+[    0.614236] Bluetooth: HCI device and connection manager initialized
+[    0.620872] Bluetooth: HCI socket layer initialized
+[    0.625975] Bluetooth: L2CAP socket layer initialized
+[    0.631284] Bluetooth: SCO socket layer initialized
+[    0.637049] clocksource: Switched to clocksource riscv_clocksource
+[    0.645591] NET: Registered protocol family 2
+[    0.651169] tcp_listen_portaddr_hash hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.659863] TCP established hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.667885] TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.675322] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.682084] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.688853] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.696276] NET: Registered protocol family 1
+[    0.701437] RPC: Registered named UNIX socket transport module.
+[    0.707560] RPC: Registered udp transport module.
+[    0.712436] RPC: Registered tcp transport module.
+[    0.717358] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.726605] Initialise system trusted keyrings
+[    0.731435] workingset: timestamp_bits=62 max_order=17 bucket_order=0
+[    0.744942] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.819763] Key type asymmetric registered
+[    0.824021] Asymmetric key parser 'x509' registered
+[    0.829831] cvitek,pinctrl-cv181x 3001000.pinctrl: cvi_pinctrl_probe(): reg=(____ptrval____),4096 PINMUX_RANGE=0xc90
+[    0.846270] Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+[    0.854724] printk: console [ttyS0] disabled
+[    0.859231] 4140000.serial: ttyS0 at MMIO 0x4140000 (irq = 17, base_baud = 1562500) is a 16550A[    0.868257] printk: console [ttyS0] enabled
+[    0.868257] printk: console [ttyS0] enabled
+[    0.876854] printk: bootconsole [sbi0] disabled
+[    0.876854] printk: bootconsole [sbi0] disabled
+[    0.887024] 4150000.serial: ttyS1 at MMIO 0x4150000 (irq = 18, base_baud = 1562500) is a 16550A
+[    0.896840] 4160000.serial: ttyS2 at MMIO 0x4160000 (irq = 19, base_baud = 1562500) is a 16550A
+[    0.906707] 4170000.serial: ttyS3 at MMIO 0x4170000 (irq = 20, base_baud = 1562500) is a 16550A
+[    0.916551] 41c0000.serial: ttyS4 at MMIO 0x41c0000 (irq = 21, base_baud = 1562500) is a 16550A
+[    0.935349] loop: module loaded
+[    0.939414] zram: Added device: zram0
+[    0.947446] spi_master spi3: cannot find modalias for /spi3@041B0000/spidev@0
+[    0.954908] spi_master spi3: Failed to create SPI device for /spi3@041B0000/spidev@0
+[    0.964165] libphy: Fixed MDIO Bus: probed
+[    0.969260] bm-dwmac 4070000.ethernet: IRQ eth_wake_irq not found
+[    0.975617] bm-dwmac 4070000.ethernet: IRQ eth_lpi not found
+[    0.981596] bm-dwmac 4070000.ethernet: Hash table entries set to unexpected value 0
+[    0.989666] bm-dwmac 4070000.ethernet: no reset control found
+[    0.995906] bm-dwmac 4070000.ethernet: User ID: 0x10, Synopsys ID: 0x37
+[    1.002820] bm-dwmac 4070000.ethernet: 	DWMAC1000
+[    1.007726] bm-dwmac 4070000.ethernet: DMA HW capability register supported
+[    1.014953] bm-dwmac 4070000.ethernet: RX Checksum Offload Engine supported
+[    1.022180] bm-dwmac 4070000.ethernet: COE Type 2
+[    1.027074] bm-dwmac 4070000.ethernet: TX Checksum insertion supported
+[    1.033852] bm-dwmac 4070000.ethernet: Normal descriptors
+[    1.039464] bm-dwmac 4070000.ethernet: Ring mode enabled
+[    1.044989] bm-dwmac 4070000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    1.052757] bm-dwmac 4070000.ethernet: device MAC address de:51:e1:b2:56:5b
+[    1.086746] libphy: stmmac: probed
+[    1.090536] CVITEK CV182XA stmmac-0:00: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+[    1.101658] CVITEK CV182XA stmmac-0:01: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:01, irq=POLL)
+[    1.114004] bm-dwmac 4070000.ethernet: Cannot get clk_500m_eth!
+[    1.120256] bm-dwmac 4070000.ethernet: Cannot get gate_clk_axi4!
+[    1.126843] usbcore: registered new interface driver asix
+[    1.132548] usbcore: registered new interface driver ax88179_178a
+[    1.138943] usbcore: registered new interface driver cdc_ether
+[    1.145115] usbcore: registered new interface driver smsc95xx
+[    1.151152] usbcore: registered new interface driver net1080
+[    1.157121] usbcore: registered new interface driver cdc_subset
+[    1.163338] usbcore: registered new interface driver zaurus
+[    1.169224] usbcore: registered new interface driver cdc_ncm
+[    1.176165] dwc2 4340000.usb: axi clk installed
+[    1.180908] dwc2 4340000.usb: apb clk installed
+[    1.185630] dwc2 4340000.usb: 125m clk installed
+[    1.190440] dwc2 4340000.usb: 33k clk installed
+[    1.195160] dwc2 4340000.usb: 12m clk installed
+[    1.199968] dwc2 4340000.usb: EPs: 8, dedicated fifos, 3072 entries in SPRAM
+[    1.207797] dwc2 4340000.usb: DWC OTG Controller
+[    1.212660] dwc2 4340000.usb: new USB bus registered, assigned bus number 1
+[    1.219931] dwc2 4340000.usb: irq 43, io mem 0x04340000
+[    1.225572] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    1.234157] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.241650] usb usb1: Product: DWC OTG Controller
+[    1.246544] usb usb1: Manufacturer: Linux 5.10.4-tag--00022-g767d3c5ab10b-dirty dwc2_hsotg
+[    1.255112] usb usb1: SerialNumber: 4340000.usb
+[    1.260516] hub 1-0:1.0: USB hub found
+[    1.264524] hub 1-0:1.0: 1 port detected
+[    1.270380] usbcore: registered new interface driver uas
+[    1.276069] usbcore: registered new interface driver usb-storage
+[    1.282680] i2c /dev entries driver
+[    1.287191] usbcore: registered new interface driver uvcvideo
+[    1.293182] USB Video Class driver (1.1.1)
+[    1.298741] Bluetooth: HCI UART driver ver 2.3
+[    1.303397] Bluetooth: HCI UART protocol H4 registered
+[    1.309319] sdhci: Secure Digital Host Controller Interface driver
+[    1.315752] sdhci: Copyright(c) Pierre Ossman
+[    1.320283] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.326427] cvi:sdhci_cvi_probe
+[    1.363158] mmc0: SDHCI controller on 4300000.cv-emmc [4300000.cv-emmc] using ADMA 64-bit
+[    1.374079] cvi:sdhci_cvi_probe
+[    1.409236] mmc1: SDHCI controller on 4310000.cv-sd [4310000.cv-sd] using ADMA 64-bit
+[    1.429065] cvi_proc_init cvi_host 0x(____ptrval____)
+[    1.441220] cvi:sdhci_cvi_probe
+[    1.446760] mmc2 bounce up to 128 segments into one, max segment size 65536 bytes
+[    1.496110] random: fast init done
+[    1.505079] mmc2: SDHCI controller on 4320000.wifi-sd [4320000.wifi-sd] using DMA
+[    1.518601] usbcore: registered new interface driver usbhid
+[    1.524521] usbhid: USB HID core driver
+[    1.535871] usbcore: registered new interface driver snd-usb-audio
+[    1.547964] cvitek-i2s 4100000.i2s: cvi_i2s_probe
+[    1.557588] cvitek-i2s 4130000.i2s: cvi_i2s_probe
+[    1.569157] cviteka-adc sound_adc: cviteka_adc_probe, dev name=sound_adc
+[    1.579722] cviteka-adc sound_adc: cviteka_adc_probe start devm_snd_soc_register_card
+[    1.592494] cvitekaadc 300a100.adc: cvitekaadc_probe
+[    1.602598] cviteka-dac sound_dac: cviteka_dac_probe, dev name=sound_dac
+[    1.615357] cvitekadac 300a000.dac: cvitekadac_probe
+[    1.625825] cvitekadac_probe gpio_is_valid mute_pin_l
+[    1.631259] cvitekadac_probe gpio_is_valid mute_pin_r
+[    1.641995] NET: Registered protocol family 10
+[    1.654996] Segment Routing with IPv6
+[    1.663548] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.675244] NET: Registered protocol family 17
+[    1.685495] Bluetooth: RFCOMM TTY layer initialized
+[    1.693741] Bluetooth: RFCOMM socket layer initialized
+[    1.699193] Bluetooth: RFCOMM ver 1.11
+[    1.706272] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    1.711882] Bluetooth: BNEP filters: protocol multicast
+[    1.717402] Bluetooth: BNEP socket layer initialized
+[    1.722646] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    1.728884] Bluetooth: HIDP socket layer initialized
+[    1.738495] Loading compiled-in X.509 certificates
+[    1.782515] cviteka-adc sound_adc: cviteka_adc_probe, dev name=sound_adc
+[    1.789556] cviteka-adc sound_adc: cviteka_adc_probe start devm_snd_soc_register_card
+[    1.811922] cviteka-dac sound_dac: cviteka_dac_probe, dev name=sound_dac
+[    1.836145] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.859624] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.866878] cfg80211: failed to load regulatory.db
+[    1.876096] ALSA device list:
+[    1.884741] ttyS0, get NULL dma-names
+[    1.888662] ttyS0, get NULL dma-names
+[    1.892576] ttyS0, get NULL dma-names
+[    1.900676] Waiting for root device /dev/mmcblk0p4...
+[    2.009071] mmc0: new HS200 MMC card at address 0001
+[    2.015188] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[    2.020500] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[    2.027198] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[    2.033620] mmcblk0rpmb: mmc0:0001 8GTF4R partition 3 512 KiB, chardev (249:0)
+[    2.041643]  mmcblk0: p1(BOOT) p2(MISC) p3(ENV) p4(ROOTFS) p5(SYSTEM) p6(CFG) p7(DATA)
+[    2.069803] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[    2.078338] VFS: Mounted root (ext4 filesystem) on device 179:4.
+[    2.085201] devtmpfs: mounted
+[    2.088505] Freeing unused kernel memory: 148K
+[    2.093165] Kernel memory protection not selected by kernel config.
+[    2.099700] Run /sbin/init as init process
+[    2.103969]   with arguments:
+[    2.107068]     /sbin/init
+[    2.109897]   with environment:
+[    2.113174]     HOME=/
+[    2.115615]     TERM=linux
+[    2.118446] early_time_log: run_init_process: 10903706us
+[    2.142778] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+############ SYSTEM: using rootfs /mnt/system (skip empty p5) #############
+############ Mounting CFG partition #############
+e2fsck 1.46.2 (28-Feb-2021)
+CFG: clean, 15/960 files, 2489/2491 blocks
+[    2.300960] EXT4-fs (mmcblk0p6): mounted filesystem with ordered data mode. Opts: (null)
+############ Mounting DATA partition #############
+e2fsck 1.46.2 (28-Feb-2021)
+DATA: clean, 14/4608 files, 1329/1339 blocks
+[    2.326265] EXT4-fs (mmcblk0p7): mounted filesystem with ordered data mode. Opts: (null)
+Initializing random number generator: OK
+Saving random seed: [    2.361340] random: dd: uninitialized urandom read (512 bytes read)
+OK
+Starting network: OK
+S99usbnet: start
+[    3.422583] using random self ethernet address
+[    3.427376] using random host ethernet address
+[    3.441835] usb0: HOST MAC 26:79:54:f5:c1:9c
+[    3.446510] usb0: MAC f6:17:92:0a:4e:e4
+[    3.450945] dwc2 4340000.usb: bound driver configfs-gadget
+  RNDIS gadget bound to 4340000.usb
+[    3.644647] dwc2 4340000.usb: new device is high-speed
+[    3.756750] dwc2 4340000.usb: new device is high-speed
+[    3.813851] dwc2 4340000.usb: new address 40
+S99usbnet: done
+init mpp system...
+[    4.506528] cv181x_sys: bad vermagic: kernel tainted.
+[    4.511856] Disabling lock debugging due to kernel taint
+[    4.517730] cv181x_sys: loading out-of-tree module taints kernel.
+[    4.536466] CVITEK CHIP ID = 21
+[    4.545134] cvi_rtos_cmdqu_probe start ---
+[    4.549481] name=1900000.rtos_cmdqu
+[    4.553682] res-reg: start: 0x1900000, end: 0x1900fff, virt-addr(ffffffd00413e000).
+[    4.561967] cvi_rtos_cmdqu_probe DONE
+[    4.566263] [cvi_spinlock_init] success
+[    4.583482] cif a0c2000.cif: cam0 clk installed
+[    4.588328] cif a0c2000.cif: cam1 clk installed
+[    4.593477] cif a0c2000.cif: vip_sys_2 clk installed
+[    4.598948] cif a0c2000.cif: clk_mipimpll clk installed (____ptrval____)
+[    4.606167] cif a0c2000.cif: clk_disppll clk installed (____ptrval____)
+[    4.613297] cif a0c2000.cif: clk_fpll clk installed (____ptrval____)
+[    4.620142] cif a0c2000.cif: (0) res-reg: start: 0xa0c2000, end: 0xa0c3fff.
+[    4.627590] cif a0c2000.cif:  virt-addr((____ptrval____))
+[    4.633439] cif a0c2000.cif: (1) res-reg: start: 0xa0d0000, end: 0xa0d0fff.
+[    4.640887] cif a0c2000.cif:  virt-addr((____ptrval____))
+[    4.646735] cif a0c2000.cif: (2) res-reg: start: 0xa0c4000, end: 0xa0c5fff.
+[    4.654210] cif a0c2000.cif:  virt-addr((____ptrval____))
+[    4.660065] cif a0c2000.cif: (3) res-reg: start: 0xa0c6000, end: 0xa0c7fff.
+[    4.667517] cif a0c2000.cif:  virt-addr((____ptrval____))
+[    4.673366] cif a0c2000.cif: (4) res-reg: start: 0x3001c30, end: 0x3001c5f.
+[    4.680814] cif a0c2000.cif:  virt-addr((____ptrval____))
+[    4.686646] cif a0c2000.cif: no pad_ctrl for cif
+[    4.691742] cif a0c2000.cif: request irq-32 as cif-irq0
+[    4.697477] cif a0c2000.cif: request irq-33 as cif-irq1
+[    4.703187] cif a0c2000.cif: rst_pin = 482, pol = 1
+[    4.713763] snsr_i2c snsr_i2c: i2c:-------hook 1
+[    4.718815] snsr_i2c snsr_i2c: i2c:-------hook 2
+[    4.724132] snsr_i2c snsr_i2c: i2c:-------hook 3
+[    4.729366] snsr_i2c snsr_i2c: i2c:-------hook 4
+[    4.758332] vi_core_probe:193(): res-reg: start: 0xa000000, end: 0xa07ffff, virt-addr(ffffffd004600000).
+[    4.768218] vi_core_probe:206(): irq(34) for isp get from platform driver.
+[    4.776123] sync_task_init:177(): sync_task_init vi_pipe 0
+[    4.782081] sync_task_init:177(): sync_task_init vi_pipe 1
+[    4.787997] sync_task_init:177(): sync_task_init vi_pipe 2
+[    4.793924] sync_task_init:177(): sync_task_init vi_pipe 3
+[    4.799838] sync_task_init:177(): sync_task_init vi_pipe 4
+[    4.806231] vi_core_probe:242(): isp registered as cvi-vi
+[    4.838579] vpss_start_handler:5175(): handler for dev(0) started
+[    4.838732] vpss_start_handler:5175(): handler for dev(1) started
+[    4.868146] cvi-mipi-tx mipi_tx: IRQ index 0 not found
+[    4.880026] cvi-mipi-tx mipi_tx: vbat irq(-6)
+[    4.885131] cvi-mipi-tx mipi_tx: reset gpio pin(354) active(0)
+[    4.891287] cvi-mipi-tx mipi_tx: power ctrl gpio pin(353) active(1)
+[    4.898172] cvi-mipi-tx mipi_tx: pwm gpio pin(352) active(1)
+[    4.916337] cv181x-cooling cv181x_cooling: elems of dev-freqs=6
+[    4.922591] cv181x-cooling cv181x_cooling: dev_freqs[0]: 850000000 500000000
+[    4.930298] cv181x-cooling cv181x_cooling: dev_freqs[1]: 425000000 375000000
+[    4.937925] cv181x-cooling cv181x_cooling: dev_freqs[2]: 425000000 300000000
+[    4.945606] cv181x-cooling cv181x_cooling: Cooling device registered: cv181x_cooling
+[    4.966161] [INFO] Register SBM IRQ ###################################
+[    4.966189] [INFO] pvctx->s_sbm_irq = 40
+[    4.978107] jpu ctrl reg pa = 0xb030000, va = (____ptrval____), size = 256
+[    4.989776] end jpu_init result = 0x0
+[    5.048279] cvi_vc_drv_init result = 0x0
+[    5.090752] sh (186): drop_caches: 3
+Starting app...
+
+[root@sg200x]~# cat /proc/partitions
+major minor  #blocks  name
+
+ 179        0    7634944 mmcblk0
+ 179        1       8192 mmcblk0p1
+ 179        2       2048 mmcblk0p2
+ 179        3        128 mmcblk0p3
+ 179        4     786560 mmcblk0p4
+ 179        5      40960 mmcblk0p5
+ 179        6      15240 mmcblk0p6
+ 179        7    4387576 mmcblk0p7
+[root@sg200x]~# umount /mnt/data; umount /mnt/cfg; echo UMOUNT_DONE
+UMOUNT_DONE
+[root@sg200x]~# e2fsck -fy /dev/mmcblk0p6
+e2fsck 1.46.2 (28-Feb-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+CFG: 15/960 files (0.0% non-contiguous), 2489/2491 blocks
+[root@sg200x]~# resize2fs /dev/mmcblk0p6
+resize2fs 1.46.2 (28-Feb-2021)
+Please run 'e2fsck -f /dev/mmcblk0p6' first.
+
+[root@sg200x]~# e2fsck -fy /dev/mmcblk0p7
+e2fsck 1.46.2 (28-Feb-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+DATA: 14/4608 files (0.0% non-contiguous), 1329/1339 blocks
+[root@sg200x]~# resize2fs /dev/mmcblk0p7
+resize2fs 1.46.2 (28-Feb-2021)
+Please run 'e2fsck -f /dev/mmcblk0p7' first.
+
+[root@sg200x]~# 

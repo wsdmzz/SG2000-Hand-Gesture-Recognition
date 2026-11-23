@@ -1,0 +1,1450 @@
+[INFO] Using libusb v1.0.26.11798[INFO] usb_dl: Nov 12 2025
+[DEBUG] fip_param1.chip_conf[3].value: 0
+[INFO] detect os type: fastboot
+
+[INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  \    [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  |     [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection:  /    [INFO] Waiting for USB device connection: ---    [INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection: ---    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  \    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  |     
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)
+[INFO] Waiting for USB device connection:  /    
+[INFO] found usb device vid=0x3346 pid=0x1000
+[DEBUG] Could not open USB device: LIBUSB_ERROR_ACCESS(-3)

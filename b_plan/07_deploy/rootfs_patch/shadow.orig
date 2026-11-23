@@ -1,0 +1,9 @@
+root:$5$JLSRq07WrOi$nOvHJRTEBXcxr6PIq7QXT2lgKnvh2b3mRLAuhkEeGvC:::::::
+daemon:*:::::::
+bin:*:::::::
+sys:*:::::::
+sync:*:::::::
+mail:*:::::::
+www-data:*:::::::
+operator:*:::::::
+nobody:*:::::::

@@ -1,0 +1,5 @@
+board_id=1
+install_height_mm=1500
+pitch_deg=0
+panel=MILKV_8HD-800x1280
+camera=GC2083

@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# S90eth0 - 评估板网线直连 eth0 开机自启 (Milk-V Duo S / SG2000)
+#
+# 作用：开机自动启用 eth0 并配置静态 IP 192.168.50.1/24，供开发机网线直连
+#       SSH(root@192.168.50.1) 使用。在 S40network(S99usbnet) 之后执行。
+#
+# 背景：评估板 eth0 默认 DOWN 且无 IP，重启后需手动 ip link set eth0 up +
+#       ip addr add 192.168.50.1/24 dev eth0 才能网线直连。此脚本固化该配置。
+#
+
+case "$1" in
+  start|"")
+    echo "S90eth0: configuring eth0 192.168.50.1/24"
+    # 启用 eth0(若已 up 则忽略错误)
+    ip link set eth0 up 2>/dev/null
+    # 仅当 eth0 尚无该网段 IP 时添加(避免重复 add 报 File exists)
+    if ! ip addr show eth0 2>/dev/null | grep -q "inet 192.168.50.1/24"; then
+      ip addr add 192.168.50.1/24 dev eth0 2>/dev/null
+    fi
+    ;;
+  stop)
+    ;;
+  restart|reload)
+    ip link set eth0 up 2>/dev/null
+    if ! ip addr show eth0 2>/dev/null | grep -q "inet 192.168.50.1/24"; then
+      ip addr add 192.168.50.1/24 dev eth0 2>/dev/null
+    fi
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac
+
+exit 0

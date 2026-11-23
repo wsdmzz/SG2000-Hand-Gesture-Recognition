@@ -1,0 +1,6 @@
+config PWM_CVITEK
+	tristate "CVITEK PWM support"
+	depends on ARCH_CVITEK
+	help
+	  This enables support for the CVITEK PWM controller (cv181x/cv180x).
+	  Provides 4 channels per controller via sysfs /sys/class/pwm/pwmchip*.

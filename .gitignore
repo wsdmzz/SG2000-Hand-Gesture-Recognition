@@ -3,15 +3,20 @@
 *.so
 build_out/
 
-# SDK / 大型源码目录（不进仓库，需自行下载）
-b_plan/
+# SDK / 大型源码目录（不进仓库，需自行下载；b_plan 只收改动子集见 01_sdk_overlay/README.md）
+b_plan/01_sdk/
+b_plan/02_tdl_sdk/
+b_plan/03_tpu/
+b_plan/04_toolchain/
+b_plan/06_build/out_collector/
 ai/tpu-mlir*/
 ai/host-tools/
 ai/cvitek-tdl-sdk-cv180x/
 ai/duo-tdl-examples/
 
-# 固件镜像 / 大型产物
+# 固件镜像 / 大型产物（清单见 b_plan/07_deploy/MANIFEST_大型产物.md）
 *.img
+*.zip
 backup_sdc_old.img
 
 # 采集数据 / 中间数据
